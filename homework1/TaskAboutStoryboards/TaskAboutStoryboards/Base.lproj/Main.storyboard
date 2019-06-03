@@ -214,7 +214,7 @@
         <!--Split View Controller-->
         <scene sceneID="EsA-TD-nnK">
             <objects>
-                <splitViewController preferredPrimaryColumnWidthFraction="0.5" id="9o8-oP-s1Q" sceneMemberID="viewController">
+                <splitViewController preferredPrimaryColumnWidthFraction="0.5" id="9o8-oP-s1Q" customClass="SplitViewController" customModule="TaskAboutStoryboards" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cLI-4I-Ncz"/>
                     <connections>
                         <segue destination="h6g-W8-CcZ" kind="relationship" relationship="detailViewController" id="M0F-P4-Dnb"/>
@@ -297,6 +297,6 @@
         <image name="ic_avatar_placeholder" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6FP-KX-Sqh"/>
+        <segue reference="M0F-P4-Dnb"/>
     </inferredMetricsTieBreakers>
 </document>

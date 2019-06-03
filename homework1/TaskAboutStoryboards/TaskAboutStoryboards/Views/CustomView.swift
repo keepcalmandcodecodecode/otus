@@ -23,7 +23,8 @@ import UIKit
     }
     
     private func setup() {
-        if let nibView: UIView = Bundle.init(for: CustomView.self).loadNibNamed("CustomView", owner: self, options: nil)?.first as? UIView {
+        let myType = type(of: self)
+        if let nibView: UIView = Bundle.init(for: myType).loadNibNamed(String(describing: myType), owner: self, options: nil)?.first as? UIView {
             nibView.frame = self.bounds
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             self.addSubview(nibView)
