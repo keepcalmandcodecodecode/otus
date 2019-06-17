@@ -71,12 +71,19 @@ extension BenchmarkViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimerCollectionViewCell.reuseID, for: indexPath) as? TimerCollectionViewCell else {
             return UICollectionViewCell(frame: .zero)
         }
+        
         let timerItem = self.timerItems[indexPath.row]
-        cell.configureWithState(timer: timerItem, color: UIColor.randomNoWhite)
+        
         weak var weakCell = cell
-        timerItem.stateDidUpdated = { timer in
-            weakCell?.updateWithTimer(timer: timer, color: UIColor.randomNoWhite)
+        timerItem.stateDidUpdated = { isRunning, count in
+            weakCell?.configureWithState(isRunning: isRunning, count: count, color: UIColor.randomNoWhite)
         }
+
+        weak var weakTimer = timerItem
+        cell.willReuse = {
+            weakTimer?.stateDidUpdated = nil
+        }
+        
         return cell
     }
     

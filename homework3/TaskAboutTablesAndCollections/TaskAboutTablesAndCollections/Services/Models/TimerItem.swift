@@ -10,16 +10,20 @@ import Foundation
 
 class TimerItem: NSObject {
     
-    var stateDidUpdated: ((TimerItem) -> Void)?
+    var stateDidUpdated: ((Bool, Int) -> Void)? {
+        didSet {
+            stateDidUpdated?(isRunning, count)
+        }
+    }
     
     var isRunning: Bool = false {
         didSet {
-            stateDidUpdated?(self)
+            stateDidUpdated?(isRunning, count)
         }
     }
     var count: Int = 0 {
         didSet {
-            stateDidUpdated?(self)
+            stateDidUpdated?(isRunning, count)
         }
     }
     private var timer: Timer?
@@ -43,4 +47,5 @@ class TimerItem: NSObject {
         count = 0
         isRunning = false
     }
+
 }
