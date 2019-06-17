@@ -29,7 +29,9 @@ class TimerItem: NSObject {
     private var timer: Timer?
     
     func run() {
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimed), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimed), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .common)
+        self.timer = timer
     }
     
     @objc private func runTimed() {
