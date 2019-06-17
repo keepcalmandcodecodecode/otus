@@ -34,7 +34,22 @@ class BenchmarkViewController: UIViewController {
 
 }
 
-extension BenchmarkViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+// MARK: - UICollectionViewDelegate
+extension BenchmarkViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let timerItem = self.timerItems[indexPath.row]
+        if timerItem.isRunning {
+            timerItem.pause()
+        } else {
+            timerItem.run()
+        }
+    }
+    
+}
+
+// MARK: - UICollectionViewDatasource
+extension BenchmarkViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return timerItems.count
@@ -53,14 +68,10 @@ extension BenchmarkViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let timerItem = self.timerItems[indexPath.row]
-        if timerItem.isRunning {
-            timerItem.pause()
-        } else {
-            timerItem.run()
-        }
-    }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+extension BenchmarkViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let padding: CGFloat =  50

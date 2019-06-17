@@ -9,6 +9,12 @@
 import Foundation
 
 class Services {
-    static let summaryItemsProvider = SummaryItemsProvider()
-    static let timerItemsProvider = TimerItemsProvider()
+    
+    static let summaryItemsProvider = {
+        return SummaryItemsProvider()
+    }()
+    
+    static let timerItemsProvider = {
+        return TimerItemsProvider()
+    }()
 }
