@@ -8,15 +8,23 @@
 
 import UIKit
 
+
+
 class BenchmarkViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
     private var timerItems: [TimerItem] = []
+    private var layoutController: LayoutController?
+    
+    // MARK: UIViewController lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(TimerCollectionViewCell.nib, forCellWithReuseIdentifier: TimerCollectionViewCell.reuseID)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(changeLayout))
+        self.layoutController = LayoutController(collectionView: collectionView, layouts: Services.benchmarkLayoutProvider.items())
+        self.layoutController?.updateLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +38,10 @@ class BenchmarkViewController: UIViewController {
         for timerItem in self.timerItems {
             timerItem.reset()
         }
+    }
+    
+    @objc func changeLayout() {
+        self.layoutController?.changeLayout()
     }
 
 }
@@ -60,24 +72,12 @@ extension BenchmarkViewController: UICollectionViewDataSource {
             return UICollectionViewCell(frame: .zero)
         }
         let timerItem = self.timerItems[indexPath.row]
-        cell.configureWithState(isRunning: timerItem.isRunning, count: timerItem.count)
+        cell.configureWithState(isRunning: timerItem.isRunning, count: timerItem.count, color: UIColor.randomNoWhite)
         weak var weakCell = cell
         timerItem.stateDidUpdated = { isRunning, count in
-            weakCell?.configureWithState(isRunning: isRunning, count: count)
+            weakCell?.configureWithState(isRunning: isRunning, count: count, color: UIColor.randomNoWhite)
         }
         return cell
-    }
-    
-}
-
-//MARK: - UICollectionViewDelegateFlowLayout
-extension BenchmarkViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat =  50
-        let width = collectionView.frame.size.width - padding
-        
-        return CGSize(width: width/2, height: width/4)
     }
     
 }

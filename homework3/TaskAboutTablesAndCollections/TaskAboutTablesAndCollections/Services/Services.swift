@@ -17,4 +17,8 @@ class Services {
     static let timerItemsProvider = {
         return TimerItemsProvider()
     }()
+    
+    static let benchmarkLayoutProvider = {
+        return BenchmarkLayoutProvider()
+    }()
 }

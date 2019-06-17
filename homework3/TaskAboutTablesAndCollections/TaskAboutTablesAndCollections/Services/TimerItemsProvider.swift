@@ -13,7 +13,7 @@ struct TimerItemsProvider {
     
     func items() -> [TimerItem] {
         var array = [TimerItem]()
-        for _ in 0..<30 {
+        for _ in 0..<300 {
             array.append(TimerItem())
         }
         return array

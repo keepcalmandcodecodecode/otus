@@ -28,7 +28,7 @@ class TimerCollectionViewCell: UICollectionViewCell {
         self.progressView.progress = 0.0
     }
 
-    func configureWithState(isRunning: Bool, count: Int) {
+    func configureWithState(isRunning: Bool, count: Int, color: UIColor) {
         if isRunning {
             self.activityIndicatorView.startAnimating()
         } else {
@@ -36,5 +36,6 @@ class TimerCollectionViewCell: UICollectionViewCell {
         }
         self.secondsLabel.text = "\(count)"
         self.progressView.setProgress(Float((count%60))/60.0, animated: true)
+        self.view.backgroundColor = color
     }
 }
