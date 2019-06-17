@@ -72,10 +72,10 @@ extension BenchmarkViewController: UICollectionViewDataSource {
             return UICollectionViewCell(frame: .zero)
         }
         let timerItem = self.timerItems[indexPath.row]
-        cell.configureWithState(isRunning: timerItem.isRunning, count: timerItem.count, color: UIColor.randomNoWhite)
+        cell.configureWithState(timer: timerItem, color: UIColor.randomNoWhite)
         weak var weakCell = cell
-        timerItem.stateDidUpdated = { isRunning, count in
-            weakCell?.configureWithState(isRunning: isRunning, count: count, color: UIColor.randomNoWhite)
+        timerItem.stateDidUpdated = { timer in
+            weakCell?.updateWithTimer(timer: timer, color: UIColor.randomNoWhite)
         }
         return cell
     }

@@ -18,6 +18,8 @@ class TimerCollectionViewCell: UICollectionViewCell {
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var view: UIView!
     
+    weak var timer:TimerItem?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,16 +28,24 @@ class TimerCollectionViewCell: UICollectionViewCell {
         self.activityIndicatorView.stopAnimating()
         self.secondsLabel.text = ""
         self.progressView.progress = 0.0
+        self.timer = nil
+    }
+    
+    func updateWithTimer(timer: TimerItem, color: UIColor) {
+        if timer == self.timer {
+            self.configureWithState(timer: timer, color: color)
+        }
     }
 
-    func configureWithState(isRunning: Bool, count: Int, color: UIColor) {
-        if isRunning {
+    func configureWithState(timer: TimerItem, color: UIColor) {
+        if timer.isRunning {
             self.activityIndicatorView.startAnimating()
         } else {
             self.activityIndicatorView.stopAnimating()
         }
-        self.secondsLabel.text = "\(count)"
-        self.progressView.setProgress(Float((count%60))/60.0, animated: true)
+        self.secondsLabel.text = "\(timer.count)"
+        self.progressView.setProgress(Float((timer.count%60))/60.0, animated: true)
         self.view.backgroundColor = color
+        self.timer = timer
     }
 }
