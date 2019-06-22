@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TaskAboutStoryboards.xcodeproj">
+      location = "self:/Users/dev/otus/OtusHomework/OtusHomework.xcodeproj">
    </FileRef>
 </Workspace>

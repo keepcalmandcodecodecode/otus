@@ -69,7 +69,7 @@
 		D730C21E22A1B92400E2BD43 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		D782A37F22A82CDE004F8E17 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D7A0378822A58EBA0041DC8E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
-		D7A3A663229DC00C00CF82A5 /* TaskAboutTablesAndCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskAboutTablesAndCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A3A663229DC00C00CF82A5 /* OtusHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtusHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A3A666229DC00C00CF82A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A3A66B229DC00C00CF82A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A3A66D229DC00D00CF82A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				D782A37F22A82CDE004F8E17 /* Default-568h@2x.png */,
-				D7A3A665229DC00C00CF82A5 /* TaskAboutTablesAndCollections */,
+				D7A3A665229DC00C00CF82A5 /* OtusHomework */,
 				D7A3A664229DC00C00CF82A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,12 +171,12 @@
 		D7A3A664229DC00C00CF82A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7A3A663229DC00C00CF82A5 /* TaskAboutTablesAndCollections.app */,
+				D7A3A663229DC00C00CF82A5 /* OtusHomework.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7A3A665229DC00C00CF82A5 /* TaskAboutTablesAndCollections */ = {
+		D7A3A665229DC00C00CF82A5 /* OtusHomework */ = {
 			isa = PBXGroup;
 			children = (
 				D7288E7822B647A000DBD230 /* Services */,
@@ -194,7 +194,7 @@
 				D7A3A66F229DC00D00CF82A5 /* LaunchScreen.storyboard */,
 				D7A3A672229DC00D00CF82A5 /* Info.plist */,
 			);
-			path = TaskAboutTablesAndCollections;
+			path = OtusHomework;
 			sourceTree = "<group>";
 		};
 		D7D33B9B22ACE991009A601A /* Benchmark */ = {
@@ -241,9 +241,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7A3A662229DC00C00CF82A5 /* TaskAboutTablesAndCollections */ = {
+		D7A3A662229DC00C00CF82A5 /* OtusHomework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7A3A675229DC00D00CF82A5 /* Build configuration list for PBXNativeTarget "TaskAboutTablesAndCollections" */;
+			buildConfigurationList = D7A3A675229DC00D00CF82A5 /* Build configuration list for PBXNativeTarget "OtusHomework" */;
 			buildPhases = (
 				D7A3A65F229DC00C00CF82A5 /* Sources */,
 				D7A3A660229DC00C00CF82A5 /* Frameworks */,
@@ -253,9 +253,9 @@
 			);
 			dependencies = (
 			);
-			name = TaskAboutTablesAndCollections;
+			name = OtusHomework;
 			productName = TaskAboutStoryboards;
-			productReference = D7A3A663229DC00C00CF82A5 /* TaskAboutTablesAndCollections.app */;
+			productReference = D7A3A663229DC00C00CF82A5 /* OtusHomework.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D7A3A65E229DC00C00CF82A5 /* Build configuration list for PBXProject "TaskAboutTablesAndCollections" */;
+			buildConfigurationList = D7A3A65E229DC00C00CF82A5 /* Build configuration list for PBXProject "OtusHomework" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,7 +286,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7A3A662229DC00C00CF82A5 /* TaskAboutTablesAndCollections */,
+				D7A3A662229DC00C00CF82A5 /* OtusHomework */,
 			);
 		};
 /* End PBXProject section */
@@ -488,12 +488,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/TaskAboutTablesAndCollections/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OtusHomework/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easy.TaskAboutTablesAndCollections;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easy.OtusHomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,12 +505,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/TaskAboutTablesAndCollections/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OtusHomework/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easy.TaskAboutTablesAndCollections;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easy.OtusHomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,7 +520,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7A3A65E229DC00C00CF82A5 /* Build configuration list for PBXProject "TaskAboutTablesAndCollections" */ = {
+		D7A3A65E229DC00C00CF82A5 /* Build configuration list for PBXProject "OtusHomework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7A3A673229DC00D00CF82A5 /* Debug */,
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7A3A675229DC00D00CF82A5 /* Build configuration list for PBXNativeTarget "TaskAboutTablesAndCollections" */ = {
+		D7A3A675229DC00D00CF82A5 /* Build configuration list for PBXNativeTarget "OtusHomework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7A3A676229DC00D00CF82A5 /* Debug */,
