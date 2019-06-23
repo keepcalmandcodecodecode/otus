@@ -10,9 +10,7 @@
 		8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */; };
 		8BF1D9C522B784C10018A88D /* NColumnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C422B784C10018A88D /* NColumnLayout.swift */; };
 		8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C822B78D620018A88D /* StagLayout.swift */; };
-		8BF1D9CE22B78DB40018A88D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9CC22B78DB40018A88D /* Array.swift */; };
 		8BF1D9D122B790F00018A88D /* LayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D022B790F00018A88D /* LayoutController.swift */; };
-		8BF1D9D322B79FB10018A88D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D222B79FB10018A88D /* UIColor.swift */; };
 		8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D422B7A5810018A88D /* NRowLayout.swift */; };
 		D7288E7122B584AD00DBD230 /* Benchmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7022B584AD00DBD230 /* Benchmark.storyboard */; };
 		D7288E7322B584CF00DBD230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7222B584CF00DBD230 /* Profile.storyboard */; };
@@ -34,6 +32,8 @@
 		D7A3A66C229DC00C00CF82A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A3A66A229DC00C00CF82A5 /* Main.storyboard */; };
 		D7A3A66E229DC00D00CF82A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A3A66D229DC00D00CF82A5 /* Assets.xcassets */; };
 		D7A3A671229DC00D00CF82A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A3A66F229DC00D00CF82A5 /* LaunchScreen.storyboard */; };
+		D7AD7A6222BFC77600F8211C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6022BFC77600F8211C /* Array.swift */; };
+		D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6122BFC77600F8211C /* UIColor.swift */; };
 		D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9922ACE846009A601A /* TimerBehavior.swift */; };
 		D7D33B9D22ACE9B4009A601A /* BenchmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9C22ACE9B4009A601A /* BenchmarkViewController.swift */; };
 		D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9F22ACF466009A601A /* StatusBarBehavior.swift */; };
@@ -49,9 +49,7 @@
 		8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkLayoutProvider.swift; sourceTree = "<group>"; };
 		8BF1D9C422B784C10018A88D /* NColumnLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NColumnLayout.swift; sourceTree = "<group>"; };
 		8BF1D9C822B78D620018A88D /* StagLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagLayout.swift; sourceTree = "<group>"; };
-		8BF1D9CC22B78DB40018A88D /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		8BF1D9D022B790F00018A88D /* LayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutController.swift; sourceTree = "<group>"; };
-		8BF1D9D222B79FB10018A88D /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8BF1D9D422B7A5810018A88D /* NRowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRowLayout.swift; sourceTree = "<group>"; };
 		D7288E7022B584AD00DBD230 /* Benchmark.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benchmark.storyboard; sourceTree = "<group>"; };
 		D7288E7222B584CF00DBD230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		D7A3A66D229DC00D00CF82A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A3A670229DC00D00CF82A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7A3A672229DC00D00CF82A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7AD7A6022BFC77600F8211C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		D7AD7A6122BFC77600F8211C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		D7D33B9922ACE846009A601A /* TimerBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBehavior.swift; sourceTree = "<group>"; };
 		D7D33B9C22ACE9B4009A601A /* BenchmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkViewController.swift; sourceTree = "<group>"; };
 		D7D33B9F22ACF466009A601A /* StatusBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarBehavior.swift; sourceTree = "<group>"; };
@@ -108,20 +108,9 @@
 			path = Layouts;
 			sourceTree = "<group>";
 		};
-		8BF1D9CB22B78DB40018A88D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8BF1D9CC22B78DB40018A88D /* Array.swift */,
-				8BF1D9D222B79FB10018A88D /* UIColor.swift */,
-			);
-			name = Extensions;
-			path = TaskAboutTablesAndCollections/Extensions;
-			sourceTree = SOURCE_ROOT;
-		};
 		D7288E7822B647A000DBD230 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8BF1D9CB22B78DB40018A88D /* Extensions */,
 				D7288E8C22B6843800DBD230 /* Models */,
 				D7288E7922B647C100DBD230 /* Services.swift */,
 				D7288E7B22B647D500DBD230 /* SummaryItemsProvider.swift */,
@@ -179,6 +168,7 @@
 		D7A3A665229DC00C00CF82A5 /* OtusHomework */ = {
 			isa = PBXGroup;
 			children = (
+				D7AD7A5F22BFC77600F8211C /* Extensions */,
 				D7288E7822B647A000DBD230 /* Services */,
 				D7D33BAC22AD24EE009A601A /* Main */,
 				D7D33B9B22ACE991009A601A /* Benchmark */,
@@ -195,6 +185,15 @@
 				D7A3A672229DC00D00CF82A5 /* Info.plist */,
 			);
 			path = OtusHomework;
+			sourceTree = "<group>";
+		};
+		D7AD7A5F22BFC77600F8211C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7AD7A6022BFC77600F8211C /* Array.swift */,
+				D7AD7A6122BFC77600F8211C /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D7D33B9B22ACE991009A601A /* Benchmark */ = {
@@ -317,14 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7288E8922B67A7300DBD230 /* TimerItem.swift in Sources */,
+				D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */,
 				D7288E7C22B647D500DBD230 /* SummaryItemsProvider.swift in Sources */,
 				8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */,
 				D7A0378922A58EBA0041DC8E /* SplitViewController.swift in Sources */,
 				D7D33B9D22ACE9B4009A601A /* BenchmarkViewController.swift in Sources */,
 				D7288E8422B674EF00DBD230 /* TimerCollectionViewCell.swift in Sources */,
-				8BF1D9CE22B78DB40018A88D /* Array.swift in Sources */,
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
+				D7AD7A6222BFC77600F8211C /* Array.swift in Sources */,
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,
 				D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */,
 				D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */,
@@ -336,7 +336,6 @@
 				D7D33BAB22AD2406009A601A /* ProfileNavigationController.swift in Sources */,
 				D7D33BA222ACF8C8009A601A /* ProfileViewController.swift in Sources */,
 				D7288E8722B6779400DBD230 /* TimerItemsProvider.swift in Sources */,
-				8BF1D9D322B79FB10018A88D /* UIColor.swift in Sources */,
 				8BF1D9C522B784C10018A88D /* NColumnLayout.swift in Sources */,
 				D7288E7722B586C600DBD230 /* SessionSummaryViewController.swift in Sources */,
 				8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */,
