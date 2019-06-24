@@ -26,7 +26,6 @@ class TimerCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("init")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +34,7 @@ class TimerCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.pieChartView.radius = 50
+        self.pieChartView.radius = 1000
     }
     
     override func layoutSubviews() {

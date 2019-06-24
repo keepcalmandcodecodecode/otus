@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358A922C0B2D100C9E22D /* UIFont.swift */; };
+		8BD358B022C0C66300C9E22D /* PieChartSliceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358AF22C0C66300C9E22D /* PieChartSliceLayer.swift */; };
 		8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */; };
 		8BF1D9C522B784C10018A88D /* NColumnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C422B784C10018A88D /* NColumnLayout.swift */; };
 		8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C822B78D620018A88D /* StagLayout.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BD358A922C0B2D100C9E22D /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		8BD358AF22C0C66300C9E22D /* PieChartSliceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartSliceLayer.swift; sourceTree = "<group>"; };
 		8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkLayoutProvider.swift; sourceTree = "<group>"; };
 		8BF1D9C422B784C10018A88D /* NColumnLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NColumnLayout.swift; sourceTree = "<group>"; };
 		8BF1D9C822B78D620018A88D /* StagLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagLayout.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				D7AD7A6022BFC77600F8211C /* Array.swift */,
 				D7AD7A6122BFC77600F8211C /* UIColor.swift */,
 				D7AD7A6B22BFC8C200F8211C /* CGPoint.swift */,
+				8BD358A922C0B2D100C9E22D /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			children = (
 				D7AD7A6522BFC81700F8211C /* PieChartView.swift */,
 				D7AD7A6722BFC84E00F8211C /* PieChartItem.swift */,
+				8BD358AF22C0C66300C9E22D /* PieChartSliceLayer.swift */,
 			);
 			path = PieChart;
 			sourceTree = "<group>";
@@ -340,12 +346,14 @@
 				8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */,
 				D7A0378922A58EBA0041DC8E /* SplitViewController.swift in Sources */,
 				D7D33B9D22ACE9B4009A601A /* BenchmarkViewController.swift in Sources */,
+				8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */,
 				D7288E8422B674EF00DBD230 /* TimerCollectionViewCell.swift in Sources */,
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
 				D7AD7A6222BFC77600F8211C /* Array.swift in Sources */,
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,
 				D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */,
+				8BD358B022C0C66300C9E22D /* PieChartSliceLayer.swift in Sources */,
 				D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */,
 				8BF1D9D122B790F00018A88D /* LayoutController.swift in Sources */,
 				D7288E7A22B647C100DBD230 /* Services.swift in Sources */,

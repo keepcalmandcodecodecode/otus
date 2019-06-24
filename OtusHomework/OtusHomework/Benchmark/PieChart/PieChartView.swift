@@ -10,11 +10,11 @@ import UIKit
 
 class PieChartView: UIView {
     
-    private var shapeLayers: [CAShapeLayer] = []
-
-    var textFont = UIFont.systemFont(ofSize: 8.0) {
+    var sliceSublayers = [PieChartSliceLayer]()
+    
+    var textFont = UIFont.systemFont(ofSize: 12.0) {
         didSet {
-            setNeedsDisplay()
+            self.setNeedsDisplay()
         }
     }
     
@@ -25,7 +25,7 @@ class PieChartView: UIView {
     }
     var radius: CGFloat = 10.0 {
         didSet {
-            setNeedsDisplay()
+            self.setNeedsDisplay()
         }
     }
     
@@ -37,70 +37,70 @@ class PieChartView: UIView {
         super.init(coder: aDecoder)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let maxRadius = self.maxAvailableRadius()
+        for layer in self.sliceSublayers {
+            layer.frame = CGRect(x: self.bounds.midX - maxRadius, y: self.bounds.midY - maxRadius, width: maxRadius*2, height: maxRadius*2)
+            layer.setNeedsLayout()
+            layer.setNeedsDisplay()
+        }
+    }
+    
     override func prepareForInterfaceBuilder() {
         setNeedsDisplay()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        for shapeLayer in self.shapeLayers {
-            shapeLayer.removeFromSuperlayer()
-            shapeLayer.frame = self.bounds
-            self.layer.addSublayer(shapeLayer)
-            shapeLayer.setNeedsDisplay()
-        }
-    }
-    
     override func draw(_ rect: CGRect) {
-        for shapeLayer in self.shapeLayers {
-            shapeLayer.removeFromSuperlayer()
+        self.isOpaque = false
+        
+        if self.sliceSublayers.count < self.items.count {
+            let diff = self.items.count - self.sliceSublayers.count
+            for _ in 0..<diff {
+                let layer = PieChartSliceLayer()
+                self.sliceSublayers.append(layer)
+                self.layer.addSublayer(layer)
+            }
+        } else if self.sliceSublayers.count > self.items.count {
+            let diff = self.sliceSublayers.count - self.items.count
+            for i in 0..<diff {
+                self.sliceSublayers[i].removeFromSuperlayer()
+            }
+            self.sliceSublayers.removeFirst(diff)
         }
-        self.shapeLayers = []
-        var maxRadius = min(self.bounds.width, self.bounds.height) / 2.0
-        if maxRadius > radius {
-            maxRadius = radius
-        }
+        
+        
+        let maxRadius = self.maxAvailableRadius()
         var sum = self.items.reduce(into: 0, { $0 += $1.value })
         var noData = false
         if sum == 0 {
             noData = true
             sum = self.items.count
         }
-        var startAngle = -CGFloat.pi / 2.0
-        let center = CGPoint(x: self.bounds.width/2.0, y: self.bounds.height/2.0)
-
-        for item in self.items {
-            let shapeLayer = CAShapeLayer()
-            shapeLayer.bounds = self.bounds
-            shapeLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            let bezierPath = UIBezierPath()
-
-            let partValue = noData ? (1.0 / CGFloat(sum)) : (CGFloat(item.value) * 1.0 / CGFloat(sum))
+        var startAngle: CGFloat = 0
+        
+        for i in 0..<self.items.count {
+            let partValue = noData ? (1.0 / CGFloat(sum)) : (CGFloat(self.items[i].value) * 1.0 / CGFloat(sum))
             let endAngle = startAngle + partValue * CGFloat.pi * 2
-            bezierPath.move(to: center)
-            bezierPath.addLine(to: CGPoint.pointOnArc(center: center, alpha: startAngle, radius: maxRadius))
-            bezierPath.addArc(withCenter: center, radius: maxRadius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
-            bezierPath.addLine(to: center)
-            bezierPath.close()
-            item.color.setFill()
-            bezierPath.fill()
-            shapeLayer.fillColor = item.color.cgColor
-            shapeLayer.path = bezierPath.cgPath
-            self.layer.addSublayer(shapeLayer)
-            self.shapeLayers.append(shapeLayer)
-            
-            if partValue > 0.1 {
-                let halfAngle = startAngle + (endAngle - startAngle) / 2.0
-                let segmentCenter = CGPoint.pointOnArc(center: center, alpha: halfAngle, radius: maxRadius / 2.0)
-                let attributes = [NSAttributedString.Key.font: self.textFont,
-                                  NSAttributedString.Key.foregroundColor: item.color.contrastColor()]
-                let textSize = (item.text as NSString).size(withAttributes: attributes)
-                let renderRect = CGRect(x: segmentCenter.x - textSize.width / 2.0, y: segmentCenter.y - textSize.height / 2.0, width: textSize.width, height: textSize.height)
-                (item.text as NSString).draw(in: renderRect, withAttributes: attributes)
-            }
-            
+            self.sliceSublayers[i].startAngle = startAngle
+            self.sliceSublayers[i].endAngle = endAngle
+            self.sliceSublayers[i].frame = CGRect(x: 0, y: 0, width: maxRadius*2, height: maxRadius*2)
+            self.sliceSublayers[i].zPosition = 0
+            self.sliceSublayers[i].position = self.layer.position
+            self.sliceSublayers[i].font = self.textFont
+            self.sliceSublayers[i].color = self.items[i].color
+            self.sliceSublayers[i].text = self.items[i].text
+            self.sliceSublayers[i].needsDisplay()
             startAngle = endAngle
         }
+    }
+    
+    private func maxAvailableRadius() -> CGFloat {
+        var maxRadius = min(self.bounds.width, self.bounds.height) / 2.0
+        if maxRadius > radius {
+            maxRadius = radius
+        }
+        return maxRadius
     }
 
 }
