@@ -22,7 +22,9 @@ class BenchmarkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(TimerCollectionViewCell.nib, forCellWithReuseIdentifier: TimerCollectionViewCell.reuseID)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(changeLayout))
+        let refreshChartsBarButtonItem = UIBarButtonItem(title: "Update charts", style: .plain, target: self, action: #selector(updateCharts))
+        let changeLayoutBarButtonItem = UIBarButtonItem(title: "Change layout", style: .plain, target: self, action: #selector(changeLayout))
+        self.navigationItem.rightBarButtonItems = [refreshChartsBarButtonItem, changeLayoutBarButtonItem]
         self.layoutController = LayoutController(collectionView: collectionView, layouts: Services.benchmarkLayoutProvider.items())
         self.layoutController?.updateLayout()
     }
@@ -42,6 +44,13 @@ class BenchmarkViewController: UIViewController {
     
     @objc func changeLayout() {
         self.layoutController?.changeLayout()
+    }
+    
+    @objc func updateCharts() {
+        guard let cells = self.collectionView.visibleCells as? [TimerCollectionViewCell] else {
+            return
+        }
+        cells.forEach { $0.refreshPieChart() }
     }
 
 }
@@ -75,15 +84,14 @@ extension BenchmarkViewController: UICollectionViewDataSource {
         let timerItem = self.timerItems[indexPath.row]
         
         weak var weakCell = cell
-        timerItem.stateDidUpdated = { isRunning, count in
-            weakCell?.configureWithState(isRunning: isRunning, count: count, color: UIColor.randomNoWhite)
+        timerItem.stateDidUpdated = { isRunning, runningCount, pausedCount in
+            weakCell?.configureWithState(isRunning: isRunning, runningCount: runningCount, pausedCount: pausedCount)
         }
-
         weak var weakTimer = timerItem
         cell.willReuse = {
             weakTimer?.stateDidUpdated = nil
         }
-        
+        cell.refreshPieChart()
         return cell
     }
     

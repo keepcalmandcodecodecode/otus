@@ -34,6 +34,9 @@
 		D7A3A671229DC00D00CF82A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A3A66F229DC00D00CF82A5 /* LaunchScreen.storyboard */; };
 		D7AD7A6222BFC77600F8211C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6022BFC77600F8211C /* Array.swift */; };
 		D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6122BFC77600F8211C /* UIColor.swift */; };
+		D7AD7A6622BFC81700F8211C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6522BFC81700F8211C /* PieChartView.swift */; };
+		D7AD7A6822BFC84E00F8211C /* PieChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6722BFC84E00F8211C /* PieChartItem.swift */; };
+		D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD7A6B22BFC8C200F8211C /* CGPoint.swift */; };
 		D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9922ACE846009A601A /* TimerBehavior.swift */; };
 		D7D33B9D22ACE9B4009A601A /* BenchmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9C22ACE9B4009A601A /* BenchmarkViewController.swift */; };
 		D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9F22ACF466009A601A /* StatusBarBehavior.swift */; };
@@ -75,6 +78,9 @@
 		D7A3A672229DC00D00CF82A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7AD7A6022BFC77600F8211C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		D7AD7A6122BFC77600F8211C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D7AD7A6522BFC81700F8211C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		D7AD7A6722BFC84E00F8211C /* PieChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartItem.swift; sourceTree = "<group>"; };
+		D7AD7A6B22BFC8C200F8211C /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		D7D33B9922ACE846009A601A /* TimerBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBehavior.swift; sourceTree = "<group>"; };
 		D7D33B9C22ACE9B4009A601A /* BenchmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkViewController.swift; sourceTree = "<group>"; };
 		D7D33B9F22ACF466009A601A /* StatusBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarBehavior.swift; sourceTree = "<group>"; };
@@ -192,13 +198,24 @@
 			children = (
 				D7AD7A6022BFC77600F8211C /* Array.swift */,
 				D7AD7A6122BFC77600F8211C /* UIColor.swift */,
+				D7AD7A6B22BFC8C200F8211C /* CGPoint.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7AD7A6422BFC80700F8211C /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				D7AD7A6522BFC81700F8211C /* PieChartView.swift */,
+				D7AD7A6722BFC84E00F8211C /* PieChartItem.swift */,
+			);
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 		D7D33B9B22ACE991009A601A /* Benchmark */ = {
 			isa = PBXGroup;
 			children = (
+				D7AD7A6422BFC80700F8211C /* PieChart */,
 				8BF1D9B922B77F6B0018A88D /* Layouts */,
 				D7288E7022B584AD00DBD230 /* Benchmark.storyboard */,
 				D7D33B9C22ACE9B4009A601A /* BenchmarkViewController.swift */,
@@ -315,6 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7AD7A6822BFC84E00F8211C /* PieChartItem.swift in Sources */,
+				D7AD7A6622BFC81700F8211C /* PieChartView.swift in Sources */,
 				D7288E8922B67A7300DBD230 /* TimerItem.swift in Sources */,
 				D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */,
 				D7288E7C22B647D500DBD230 /* SummaryItemsProvider.swift in Sources */,
@@ -340,6 +359,7 @@
 				D7288E7722B586C600DBD230 /* SessionSummaryViewController.swift in Sources */,
 				8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */,
 				D7D33BA922ACFCAF009A601A /* FeedThirdViewController.swift in Sources */,
+				D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */,
 				D730C21A22A1ACAC00E2BD43 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,44 +9,58 @@
 import Foundation
 
 class TimerItem: NSObject {
-    
-    var stateDidUpdated: ((Bool, Int) -> Void)? {
+
+    var stateDidUpdated: ((Bool, Int, Int) -> Void)? {
         didSet {
-            stateDidUpdated?(isRunning, count)
+            stateDidUpdated?(isRunning, runningCount, pausedCount)
         }
     }
     
     var isRunning: Bool = false {
         didSet {
-            stateDidUpdated?(isRunning, count)
+            stateDidUpdated?(isRunning, runningCount, pausedCount)
         }
     }
-    var count: Int = 0 {
+    
+    var pausedCount: Int = 0 {
         didSet {
-            stateDidUpdated?(isRunning, count)
+            stateDidUpdated?(isRunning, runningCount, pausedCount)
+        }
+    }
+    
+    var runningCount: Int = 0 {
+        didSet {
+            stateDidUpdated?(isRunning, runningCount, pausedCount)
         }
     }
     private var timer: Timer?
     
     func run() {
-        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimed), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer, forMode: .common)
-        self.timer = timer
+        if self.timer == nil {
+            let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimed), userInfo: nil, repeats: true)
+            RunLoop.main.add(timer, forMode: .common)
+            self.timer = timer
+        }
+        self.isRunning = true
+        
     }
     
     @objc private func runTimed() {
-        self.count += 1
-        self.isRunning = true
+        if isRunning {
+            self.runningCount += 1
+        } else {
+            self.pausedCount += 1
+        }
     }
     
     func pause() {
-        self.timer?.invalidate()
         self.isRunning = false
     }
     
     func reset() {
         self.timer?.invalidate()
-        count = 0
+        runningCount = 0
+        pausedCount = 0
         isRunning = false
     }
 
