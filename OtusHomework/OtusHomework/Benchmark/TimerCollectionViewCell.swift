@@ -10,36 +10,52 @@ import UIKit
 
 class TimerCollectionViewCell: UICollectionViewCell {
     
+    private var currentRunningCount = 0
+    private var currentPausedCount = 0
+    private static let pausedColor = UIColor.randomNoWhite
+    private static let runningColor = UIColor.randomNoWhite
+    
     static let reuseID = String(describing: TimerCollectionViewCell.self)
     static let nib = UINib(nibName: String(describing: TimerCollectionViewCell.self), bundle: nil)
     
     var willReuse: (() -> Void)?
 
-    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet var pieChartView: PieChartView!
     @IBOutlet var secondsLabel: UILabel!
-    @IBOutlet var progressView: UIProgressView!
     @IBOutlet var view: UIView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.pieChartView.radius = 1000
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         self.willReuse?()
-        self.activityIndicatorView.stopAnimating()
         self.secondsLabel.text = ""
-        self.progressView.progress = 0.0
     }
 
-    func configureWithState(isRunning: Bool, count: Int, color: UIColor) {
-        if isRunning {
-            self.activityIndicatorView.startAnimating()
-        } else {
-            self.activityIndicatorView.stopAnimating()
-        }
-        self.secondsLabel.text = "\(count)"
-        self.progressView.setProgress(Float((count%60))/60.0, animated: true)
-        self.view.backgroundColor = color
+    func configureWithState(isRunning: Bool, runningCount: Int, pausedCount: Int) {
+        self.secondsLabel.text = "\(runningCount)"
+        self.currentRunningCount = runningCount
+        self.currentPausedCount = pausedCount
+    }
+    
+    func refreshPieChart() {
+        self.pieChartView.items = [PieChartItem(color: TimerCollectionViewCell.runningColor, text: "running", value: self.currentRunningCount), PieChartItem(color: TimerCollectionViewCell.pausedColor, text: "paused", value: currentPausedCount)]
+        self.pieChartView.setNeedsDisplay()
     }
 
 }
