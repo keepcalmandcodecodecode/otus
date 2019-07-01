@@ -86,6 +86,7 @@ extension BenchmarkViewController: UICollectionViewDataSource {
         weak var weakCell = cell
         timerItem.stateDidUpdated = { isRunning, runningCount, pausedCount in
             weakCell?.configureWithState(isRunning: isRunning, runningCount: runningCount, pausedCount: pausedCount)
+            weakCell?.refreshPieChart()
         }
         weak var weakTimer = timerItem
         cell.willReuse = {

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 struct PieChartLayerItem {
     let progress: CGFloat
     let startAngle: CGFloat
@@ -19,8 +18,6 @@ struct PieChartLayerItem {
 }
 
 class PieChartLayer: CAShapeLayer {
-    
-    static let kEndAngleAnimationKey = "animateEndAngle"
     
     var items = [PieChartLayerItem]()
     @objc @NSManaged var endAngle: CGFloat
@@ -96,7 +93,11 @@ class PieChartLayer: CAShapeLayer {
         animation.duration = 0.5;
         animation.fromValue = -CGFloat.pi / 2.0;
         animation.toValue = CGFloat.pi * 2.0
-        self.add(animation, forKey: PieChartLayer.kEndAngleAnimationKey)
+        self.add(animation, forKey: PieChartLayer.endAngleAnimationKey)
     }
     
+}
+
+private extension PieChartLayer {
+    static let endAngleAnimationKey = "animateEndAngle"
 }
