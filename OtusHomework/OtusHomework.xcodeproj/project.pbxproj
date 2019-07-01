@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B030FE922CA02BA0003AB4B /* SuffixArraySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */; };
+		8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */; };
+		8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */; };
+		8B030FFB22CA47820003AB4B /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF122CA47820003AB4B /* ArrayManipulator.swift */; };
+		8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */; };
+		8B030FFD22CA47820003AB4B /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF322CA47820003AB4B /* StringGenerator.swift */; };
+		8B030FFE22CA47820003AB4B /* SwiftDictionaryManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF522CA47820003AB4B /* SwiftDictionaryManipulator.swift */; };
+		8B030FFF22CA47820003AB4B /* DictionaryManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF622CA47820003AB4B /* DictionaryManipulator.swift */; };
+		8B03100022CA47820003AB4B /* SwiftSetManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF822CA47820003AB4B /* SwiftSetManipulator.swift */; };
+		8B03100122CA47820003AB4B /* SetManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF922CA47820003AB4B /* SetManipulator.swift */; };
+		8B03100222CA47820003AB4B /* Profiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FFA22CA47820003AB4B /* Profiler.swift */; };
+		8B03100822CA48210003AB4B /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100422CA48210003AB4B /* ArrayViewController.swift */; };
+		8B03100922CA48210003AB4B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100522CA48210003AB4B /* DictionaryViewController.swift */; };
+		8B03100A22CA48210003AB4B /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100622CA48210003AB4B /* SetViewController.swift */; };
+		8B03100B22CA48210003AB4B /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100722CA48210003AB4B /* DataStructuresViewController.swift */; };
+		8B03100D22CA48390003AB4B /* DataStructures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03100C22CA48390003AB4B /* DataStructures.storyboard */; };
 		8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358A922C0B2D100C9E22D /* UIFont.swift */; };
 		8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */; };
 		8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */; };
@@ -51,6 +67,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArraySequence.swift; sourceTree = "<group>"; };
+		8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayIterator.swift; sourceTree = "<group>"; };
+		8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoProvider.swift; sourceTree = "<group>"; };
+		8B030FF122CA47820003AB4B /* ArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
+		8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
+		8B030FF322CA47820003AB4B /* StringGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringGenerator.swift; sourceTree = "<group>"; };
+		8B030FF522CA47820003AB4B /* SwiftDictionaryManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictionaryManipulator.swift; sourceTree = "<group>"; };
+		8B030FF622CA47820003AB4B /* DictionaryManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryManipulator.swift; sourceTree = "<group>"; };
+		8B030FF822CA47820003AB4B /* SwiftSetManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSetManipulator.swift; sourceTree = "<group>"; };
+		8B030FF922CA47820003AB4B /* SetManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetManipulator.swift; sourceTree = "<group>"; };
+		8B030FFA22CA47820003AB4B /* Profiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profiler.swift; sourceTree = "<group>"; };
+		8B03100422CA48210003AB4B /* ArrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
+		8B03100522CA48210003AB4B /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		8B03100622CA48210003AB4B /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		8B03100722CA48210003AB4B /* DataStructuresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
+		8B03100C22CA48390003AB4B /* DataStructures.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataStructures.storyboard; sourceTree = "<group>"; };
 		8BD358A922C0B2D100C9E22D /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartLayer.swift; sourceTree = "<group>"; };
 		8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkLayoutProvider.swift; sourceTree = "<group>"; };
@@ -107,6 +139,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B030FEE22CA47820003AB4B /* Profiler */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FEF22CA47820003AB4B /* DataStructures */,
+				8B030FFA22CA47820003AB4B /* Profiler.swift */,
+			);
+			name = Profiler;
+			path = OtusHomework/Models/Profiler;
+			sourceTree = SOURCE_ROOT;
+		};
+		8B030FEF22CA47820003AB4B /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FF022CA47820003AB4B /* Array */,
+				8B030FF322CA47820003AB4B /* StringGenerator.swift */,
+				8B030FF422CA47820003AB4B /* Dictionary */,
+				8B030FF722CA47820003AB4B /* Set */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		8B030FF022CA47820003AB4B /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FF122CA47820003AB4B /* ArrayManipulator.swift */,
+				8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		8B030FF422CA47820003AB4B /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FF522CA47820003AB4B /* SwiftDictionaryManipulator.swift */,
+				8B030FF622CA47820003AB4B /* DictionaryManipulator.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		8B030FF722CA47820003AB4B /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FF822CA47820003AB4B /* SwiftSetManipulator.swift */,
+				8B030FF922CA47820003AB4B /* SetManipulator.swift */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		8B03100322CA48210003AB4B /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				8B03100C22CA48390003AB4B /* DataStructures.storyboard */,
+				8B03100422CA48210003AB4B /* ArrayViewController.swift */,
+				8B03100522CA48210003AB4B /* DictionaryViewController.swift */,
+				8B03100622CA48210003AB4B /* SetViewController.swift */,
+				8B03100722CA48210003AB4B /* DataStructuresViewController.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		8BF1D9B922B77F6B0018A88D /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +213,11 @@
 		D7288E7822B647A000DBD230 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D7288E8C22B6843800DBD230 /* Models */,
 				D7288E7922B647C100DBD230 /* Services.swift */,
 				D7288E7B22B647D500DBD230 /* SummaryItemsProvider.swift */,
 				D7288E8622B6779400DBD230 /* TimerItemsProvider.swift */,
 				8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */,
+				8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -133,7 +225,10 @@
 		D7288E8C22B6843800DBD230 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B030FEE22CA47820003AB4B /* Profiler */,
 				D7288E8822B67A7300DBD230 /* TimerItem.swift */,
+				8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */,
+				8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				D7AD7A5F22BFC77600F8211C /* Extensions */,
+				D7288E8C22B6843800DBD230 /* Models */,
 				D7288E7822B647A000DBD230 /* Services */,
 				D7D33BAC22AD24EE009A601A /* Main */,
 				D7D33B9B22ACE991009A601A /* Benchmark */,
@@ -244,6 +340,7 @@
 		D7D33BA322ACFC41009A601A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8B03100322CA48210003AB4B /* DataStructures */,
 				D7D33BAF22AD29BF009A601A /* Feed.storyboard */,
 				D7D33BA422ACFC9A009A601A /* FeedViewController.swift */,
 				D7D33BA822ACFCAF009A601A /* FeedThirdViewController.swift */,
@@ -324,6 +421,7 @@
 				D7A3A66E229DC00D00CF82A5 /* Assets.xcassets in Resources */,
 				D7A3A66C229DC00C00CF82A5 /* Main.storyboard in Resources */,
 				D730C21822A1A9DC00E2BD43 /* Details.storyboard in Resources */,
+				8B03100D22CA48390003AB4B /* DataStructures.storyboard in Resources */,
 				D7288E7322B584CF00DBD230 /* Profile.storyboard in Resources */,
 				D7288E7122B584AD00DBD230 /* Benchmark.storyboard in Resources */,
 				D7288E8522B674EF00DBD230 /* TimerCollectionViewCell.xib in Resources */,
@@ -338,7 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B03100B22CA48210003AB4B /* DataStructuresViewController.swift in Sources */,
 				D7AD7A6822BFC84E00F8211C /* PieChartItem.swift in Sources */,
+				8B03100A22CA48210003AB4B /* SetViewController.swift in Sources */,
+				8B030FE922CA02BA0003AB4B /* SuffixArraySequence.swift in Sources */,
 				D7AD7A6622BFC81700F8211C /* PieChartView.swift in Sources */,
 				D7288E8922B67A7300DBD230 /* TimerItem.swift in Sources */,
 				D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */,
@@ -346,13 +447,18 @@
 				8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */,
 				D7A0378922A58EBA0041DC8E /* SplitViewController.swift in Sources */,
 				D7D33B9D22ACE9B4009A601A /* BenchmarkViewController.swift in Sources */,
+				8B03100022CA47820003AB4B /* SwiftSetManipulator.swift in Sources */,
 				8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */,
 				D7288E8422B674EF00DBD230 /* TimerCollectionViewCell.swift in Sources */,
+				8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */,
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
+				8B03100922CA48210003AB4B /* DictionaryViewController.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
+				8B030FFD22CA47820003AB4B /* StringGenerator.swift in Sources */,
 				D7AD7A6222BFC77600F8211C /* Array.swift in Sources */,
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,
 				D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */,
+				8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */,
 				8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */,
 				D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */,
 				8BF1D9D122B790F00018A88D /* LayoutController.swift in Sources */,
@@ -360,14 +466,21 @@
 				D730C21D22A1B91200E2BD43 /* CustomView.swift in Sources */,
 				D7D33BAE22AD250F009A601A /* MainViewController.swift in Sources */,
 				D7A3A667229DC00C00CF82A5 /* AppDelegate.swift in Sources */,
+				8B030FFB22CA47820003AB4B /* ArrayManipulator.swift in Sources */,
 				D7D33BAB22AD2406009A601A /* ProfileNavigationController.swift in Sources */,
 				D7D33BA222ACF8C8009A601A /* ProfileViewController.swift in Sources */,
+				8B03100822CA48210003AB4B /* ArrayViewController.swift in Sources */,
+				8B03100222CA47820003AB4B /* Profiler.swift in Sources */,
 				D7288E8722B6779400DBD230 /* TimerItemsProvider.swift in Sources */,
 				8BF1D9C522B784C10018A88D /* NColumnLayout.swift in Sources */,
 				D7288E7722B586C600DBD230 /* SessionSummaryViewController.swift in Sources */,
 				8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */,
+				8B03100122CA47820003AB4B /* SetManipulator.swift in Sources */,
 				D7D33BA922ACFCAF009A601A /* FeedThirdViewController.swift in Sources */,
+				8B030FFE22CA47820003AB4B /* SwiftDictionaryManipulator.swift in Sources */,
 				D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */,
+				8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */,
+				8B030FFF22CA47820003AB4B /* DictionaryManipulator.swift in Sources */,
 				D730C21A22A1ACAC00E2BD43 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

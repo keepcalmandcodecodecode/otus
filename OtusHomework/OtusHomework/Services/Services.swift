@@ -21,4 +21,8 @@ class Services {
     static let benchmarkLayoutProvider = {
         return BenchmarkLayoutProvider()
     }()
+    
+    static let algoProvider = {
+        return AlgoProvider()
+    }()
 }
