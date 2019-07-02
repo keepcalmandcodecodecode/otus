@@ -12,7 +12,7 @@ class ArraySearchManipulator {
     
     private var allSearchStrings = [String]()
     
-    func loadArray() {
+    func loadArray(results: [SearchResult]) {
         self.allSearchStrings = Services.algoProvider.all
     }
     
@@ -36,9 +36,9 @@ class ArraySearchManipulator {
 
 extension ArraySearchManipulator: SearchManipulator {
     
-    func loadArrayWithMeasuring() -> TimeInterval {
+    func loadArrayWithMeasuring(results: [SearchResult]) -> TimeInterval {
         let time = Profiler.runClosureForTime() {
-            self.loadArray()
+            self.loadArray(results: results)
         }
         return time
     }
@@ -48,11 +48,6 @@ extension ArraySearchManipulator: SearchManipulator {
         let time = Profiler.runClosureForTime {
             results = self.search(searchString: searchString, maxOccurencies: maxOccurencies)
         }
-        print("---")
-        for result in results {
-            print(result)
-        }
-        print("---")
         return (time, results)
     }
     

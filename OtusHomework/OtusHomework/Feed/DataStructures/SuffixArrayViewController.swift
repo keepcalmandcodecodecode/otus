@@ -59,8 +59,9 @@ class SuffixArrayViewController: DataStructuresViewController {
     }
     
     override func create(_ size: Int) {
-        creationTime = suffixArrayManipulator.loadArrayWithMeasuring()
-        arrayCreationTime = arraySearchManipulator.loadArrayWithMeasuring()
+        let searchResults = Services.algoProvider.searchStrings
+        creationTime = suffixArrayManipulator.loadArrayWithMeasuring(results: searchResults)
+        arrayCreationTime = arraySearchManipulator.loadArrayWithMeasuring(results: searchResults)
     }
     
     override func test() {
@@ -111,7 +112,7 @@ class SuffixArrayViewController: DataStructuresViewController {
             cell.textLabel?.text = "Suffix Array Find 3 symbols test: "
             cell.detailTextLabel?.text = formattedTime(search3symbolsTime)
         case .search3symbolsWithInfiniteOccurencies:
-            cell.textLabel?.text = "Suffix Array Find + results: "
+            cell.textLabel?.text = "Suffix Array Find 'Sort' + results: "
             cell.detailTextLabel?.text = "\(formattedTime(search3symbolsWithInfiniteOccurenciesTime)!) \(search3symbolsWithInfiniteOccurenciesCount)"
         case .arrayCreation:
             cell.textLabel?.text = "Search Array creation"
@@ -120,7 +121,7 @@ class SuffixArrayViewController: DataStructuresViewController {
             cell.textLabel?.text = "Search Array Find 3 symbols test: "
             cell.detailTextLabel?.text = formattedTime(arraySearch3symbolsTime)
         case .arraySearch3symbolsWithInfiniteOccurencies:
-            cell.textLabel?.text = "Search Array Find + results: "
+            cell.textLabel?.text = "Search Array Find 'Sort' + results: "
             cell.detailTextLabel?.text = "\(formattedTime(arraySearch3symbolsWithInfiniteOccurenciesTime)!) \(arraySearch3symbolsWithInfiniteOccurenciesCount)"
         default:
             break;

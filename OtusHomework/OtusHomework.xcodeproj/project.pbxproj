@@ -34,6 +34,7 @@
 		8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C822B78D620018A88D /* StagLayout.swift */; };
 		8BF1D9D122B790F00018A88D /* LayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D022B790F00018A88D /* LayoutController.swift */; };
 		8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D422B7A5810018A88D /* NRowLayout.swift */; };
+		D721129022CBE93900437EFC /* SearchArrayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721128F22CBE93900437EFC /* SearchArrayAdapter.swift */; };
 		D7288E7122B584AD00DBD230 /* Benchmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7022B584AD00DBD230 /* Benchmark.storyboard */; };
 		D7288E7322B584CF00DBD230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7222B584CF00DBD230 /* Profile.storyboard */; };
 		D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7288E7422B5850600DBD230 /* ViewControllerLifecycleBehavior.swift */; };
@@ -99,10 +100,11 @@
 		8BF1D9C822B78D620018A88D /* StagLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagLayout.swift; sourceTree = "<group>"; };
 		8BF1D9D022B790F00018A88D /* LayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutController.swift; sourceTree = "<group>"; };
 		8BF1D9D422B7A5810018A88D /* NRowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRowLayout.swift; sourceTree = "<group>"; };
+		D721128F22CBE93900437EFC /* SearchArrayAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArrayAdapter.swift; sourceTree = "<group>"; };
 		D7288E7022B584AD00DBD230 /* Benchmark.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benchmark.storyboard; sourceTree = "<group>"; };
 		D7288E7222B584CF00DBD230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D7288E7422B5850600DBD230 /* ViewControllerLifecycleBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifecycleBehavior.swift; sourceTree = "<group>"; };
-		D7288E7622B586C600DBD230 /* SessionSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSummaryViewController.swift; sourceTree = "<group>"; };
+		D7288E7622B586C600DBD230 /* SessionSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionSummaryViewController.swift; path = "New Group/SessionSummaryViewController.swift"; sourceTree = "<group>"; };
 		D7288E7922B647C100DBD230 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		D7288E7B22B647D500DBD230 /* SummaryItemsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryItemsProvider.swift; sourceTree = "<group>"; };
 		D7288E8222B674EF00DBD230 /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */,
 				8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */,
 				8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */,
+				D721128F22CBE93900437EFC /* SearchArrayAdapter.swift */,
 			);
 			path = SuffixArray;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,
 				D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */,
 				8B77379722CB8AAB00DF74D3 /* SuffixArrayManipulator.swift in Sources */,
+				D721129022CBE93900437EFC /* SearchArrayAdapter.swift in Sources */,
 				8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */,
 				8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */,
 				D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */,

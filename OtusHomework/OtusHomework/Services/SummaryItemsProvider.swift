@@ -11,6 +11,6 @@ import UIKit
 struct SummaryItemsProvider {
     
     func items() -> [String] {
-        return ["SuffixArray"]
+        return ["Suffix Array", "Set", "Array", "Dictionary"]
     }
 }

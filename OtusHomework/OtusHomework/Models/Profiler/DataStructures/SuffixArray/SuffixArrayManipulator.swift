@@ -9,23 +9,21 @@
 import Foundation
 
 class SuffixArrayManipulator {
-    
-    private typealias SearchResult = (suffix: String, algoName: String)
-    
+
     private var allSearchStrings = [SearchResult]()
     
-    func loadArray() {
-        self.allSearchStrings = Services.algoProvider.searchStrings
+    func loadArray(results: [SearchResult]) {
+        self.allSearchStrings = results
     }
     
     func search(searchString: String, maxOccurencies: Int = 1) -> [String] {
         var results = [String]()
-        guard let firstIndex = Search.binarySearch(item: (suffix: searchString, algoName: ""), in: allSearchStrings, compare: {sr1,sr2 in
+        guard let firstIndex = Search.binarySearch(item: (suffix: searchString, name: ""), in: allSearchStrings, compare: {sr1,sr2 in
             return sr1.suffix.compare(sr2.suffix)
         }) else {
             return results
         }
-        results.append(allSearchStrings[firstIndex].algoName)
+        results.append(allSearchStrings[firstIndex].name)
         if maxOccurencies == 1 {
             return results
         }
@@ -36,7 +34,7 @@ class SuffixArrayManipulator {
         var stop = false
         while i >= 0 && results.count < maxCount && !stop {
             if allSearchStrings[i].suffix == searchString {
-                results.append(allSearchStrings[i].algoName)
+                results.append(allSearchStrings[i].name)
             } else {
                 stop = true
             }
@@ -49,7 +47,7 @@ class SuffixArrayManipulator {
             i = firstIndex + 1
             while i < self.allSearchStrings.count && results.count <= maxCount && !stop {
                 if allSearchStrings[i].suffix == searchString {
-                    results.append(allSearchStrings[i].algoName)
+                    results.append(allSearchStrings[i].name)
                 } else {
                     stop = true
                 }
@@ -66,9 +64,9 @@ class SuffixArrayManipulator {
 
 extension SuffixArrayManipulator: SearchManipulator {
     
-    func loadArrayWithMeasuring() -> TimeInterval {
+    func loadArrayWithMeasuring(results: [SearchResult]) -> TimeInterval {
         let time = Profiler.runClosureForTime() {
-            self.loadArray()
+            self.loadArray(results: results)
         }
         return time
     }

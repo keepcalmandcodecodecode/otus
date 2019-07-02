@@ -10,7 +10,7 @@ import Foundation
 
 protocol SearchManipulator {
     
-    func loadArrayWithMeasuring() -> TimeInterval
+    func loadArrayWithMeasuring(results: [SearchResult]) -> TimeInterval
     func searchWithMeasuring(searchString: String, maxOccurencies: Int) -> (TimeInterval, [String])
     
 }
