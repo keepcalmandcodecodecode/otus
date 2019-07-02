@@ -46,7 +46,7 @@ extension ArraySearchManipulator: SearchManipulator {
     func searchWithMeasuring(searchString: String, maxOccurencies: Int = 1) -> (TimeInterval, [String]) {
         var results = [String]()
         let time = Profiler.runClosureForTime {
-            results = self.search(searchString: searchString, maxOccurencies: 0)
+            results = self.search(searchString: searchString, maxOccurencies: maxOccurencies)
         }
         print("---")
         for result in results {

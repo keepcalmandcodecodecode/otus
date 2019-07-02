@@ -31,21 +31,27 @@ class SuffixArrayManipulator {
         }
         
         //find from top
-        var i = 0
+        var i = firstIndex - 1
         let maxCount = maxOccurencies == 0 ? Int.max : maxOccurencies
-        while i < firstIndex && results.count <= maxCount {
+        var stop = false
+        while i >= 0 && results.count < maxCount && !stop {
             if allSearchStrings[i].suffix == searchString {
                 results.append(allSearchStrings[i].algoName)
+            } else {
+                stop = true
             }
-            i += 1
+            i -= 1
         }
         
         //find from bottom
+        stop = false
         if firstIndex < allSearchStrings.count - 1 {
             i = firstIndex + 1
-            while i < self.allSearchStrings.count && results.count <= maxCount {
+            while i < self.allSearchStrings.count && results.count <= maxCount && !stop {
                 if allSearchStrings[i].suffix == searchString {
                     results.append(allSearchStrings[i].algoName)
+                } else {
+                    stop = true
                 }
                 i += 1
             }
@@ -70,7 +76,7 @@ extension SuffixArrayManipulator: SearchManipulator {
     func searchWithMeasuring(searchString: String, maxOccurencies: Int = 1) -> (TimeInterval, [String]) {
         var results = [String]()
         let time = Profiler.runClosureForTime {
-            results = self.search(searchString: searchString, maxOccurencies: 0)
+            results = self.search(searchString: searchString, maxOccurencies: maxOccurencies)
         }
         print("---")
         for result in results {
