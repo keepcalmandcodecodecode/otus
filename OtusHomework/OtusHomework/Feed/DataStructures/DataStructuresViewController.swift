@@ -17,8 +17,8 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
 
   //MARK: IBOutlets
 
-  @IBOutlet weak var slider: UISlider!
-  @IBOutlet weak var countLabel: UILabel!
+  @IBOutlet weak var slider: UISlider?
+  @IBOutlet weak var countLabel: UILabel?
   @IBOutlet weak var resultsTableView: UITableView!
   @IBOutlet weak var createAndTestButton: UIButton!
   @IBOutlet weak var testOnlyButton: UIButton!
@@ -76,18 +76,23 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
   //MARK: Convenience methods
 
   func updateCountLabel() {
-    countLabel.text = "Number of items: \(numberFormatter.string(from: numberOfItems as NSNumber)!)"
+    countLabel?.text = "Number of items: \(numberFormatter.string(from: numberOfItems as NSNumber)!)"
   }
 
   func setSliderValueProgrammatically(_ value: Int) {
-    slider.value = Float(value)
+    slider?.value = Float(value)
+    if let slider = slider {
     sliderAdjusted(slider)
+    }
+    
   }
 
   func setControlsEnabled(_ enabled: Bool) {
     testOnlyButton.isEnabled = enabled
     createAndTestButton.isEnabled = enabled
-    slider.isEnabled = enabled
+    if let slider = slider {
+        slider.isEnabled = enabled
+    }
     if enabled {
       spinner.stopAnimating()
     } else {

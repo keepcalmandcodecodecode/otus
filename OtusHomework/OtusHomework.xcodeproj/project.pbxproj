@@ -23,6 +23,10 @@
 		8B03100A22CA48210003AB4B /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100622CA48210003AB4B /* SetViewController.swift */; };
 		8B03100B22CA48210003AB4B /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100722CA48210003AB4B /* DataStructuresViewController.swift */; };
 		8B03100D22CA48390003AB4B /* DataStructures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03100C22CA48390003AB4B /* DataStructures.storyboard */; };
+		8B77379722CB8AAB00DF74D3 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */; };
+		8B77379922CBA34300DF74D3 /* ArraySearchManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */; };
+		8B77379B22CBA36800DF74D3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379A22CBA36800DF74D3 /* Search.swift */; };
+		8B77379D22CBA40600DF74D3 /* SearchManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */; };
 		8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358A922C0B2D100C9E22D /* UIFont.swift */; };
 		8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */; };
 		8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */; };
@@ -84,6 +88,10 @@
 		8B03100622CA48210003AB4B /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		8B03100722CA48210003AB4B /* DataStructuresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
 		8B03100C22CA48390003AB4B /* DataStructures.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataStructures.storyboard; sourceTree = "<group>"; };
+		8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySearchManipulator.swift; sourceTree = "<group>"; };
+		8B77379A22CBA36800DF74D3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManipulator.swift; sourceTree = "<group>"; };
 		8BD358A922C0B2D100C9E22D /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartLayer.swift; sourceTree = "<group>"; };
 		8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkLayoutProvider.swift; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 		8B030FEE22CA47820003AB4B /* Profiler */ = {
 			isa = PBXGroup;
 			children = (
+				8B77379A22CBA36800DF74D3 /* Search.swift */,
 				8B030FEF22CA47820003AB4B /* DataStructures */,
 				8B030FFA22CA47820003AB4B /* Profiler.swift */,
 			);
@@ -154,6 +163,7 @@
 		8B030FEF22CA47820003AB4B /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				8B77379522CB8A8400DF74D3 /* SuffixArray */,
 				8B030FF022CA47820003AB4B /* Array */,
 				8B030FF322CA47820003AB4B /* StringGenerator.swift */,
 				8B030FF422CA47820003AB4B /* Dictionary */,
@@ -202,6 +212,18 @@
 			path = DataStructures;
 			sourceTree = "<group>";
 		};
+		8B77379522CB8A8400DF74D3 /* SuffixArray */ = {
+			isa = PBXGroup;
+			children = (
+				8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */,
+				8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */,
+				8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */,
+				8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */,
+				8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */,
+			);
+			path = SuffixArray;
+			sourceTree = "<group>";
+		};
 		8BF1D9B922B77F6B0018A88D /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +252,6 @@
 			children = (
 				8B030FEE22CA47820003AB4B /* Profiler */,
 				D7288E8822B67A7300DBD230 /* TimerItem.swift */,
-				8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */,
-				8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -446,6 +466,7 @@
 				D7AD7A6622BFC81700F8211C /* PieChartView.swift in Sources */,
 				D7288E8922B67A7300DBD230 /* TimerItem.swift in Sources */,
 				D7AD7A6322BFC77600F8211C /* UIColor.swift in Sources */,
+				8B77379D22CBA40600DF74D3 /* SearchManipulator.swift in Sources */,
 				D7288E7C22B647D500DBD230 /* SummaryItemsProvider.swift in Sources */,
 				8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */,
 				D7A0378922A58EBA0041DC8E /* SplitViewController.swift in Sources */,
@@ -462,6 +483,7 @@
 				D7AD7A6222BFC77600F8211C /* Array.swift in Sources */,
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,
 				D7D33B9A22ACE846009A601A /* TimerBehavior.swift in Sources */,
+				8B77379722CB8AAB00DF74D3 /* SuffixArrayManipulator.swift in Sources */,
 				8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */,
 				8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */,
 				D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */,
@@ -484,6 +506,8 @@
 				8B030FFE22CA47820003AB4B /* SwiftDictionaryManipulator.swift in Sources */,
 				D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */,
 				8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */,
+				8B77379922CBA34300DF74D3 /* ArraySearchManipulator.swift in Sources */,
+				8B77379B22CBA36800DF74D3 /* Search.swift in Sources */,
 				8B030FFF22CA47820003AB4B /* DictionaryManipulator.swift in Sources */,
 				D730C21A22A1ACAC00E2BD43 /* CustomButton.swift in Sources */,
 			);

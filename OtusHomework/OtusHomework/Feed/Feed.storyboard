@@ -126,20 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="VPD-Gu-F74">
-                                <rect key="frame" x="18" y="52" width="378" height="31"/>
-                                <connections>
-                                    <action selector="sliderAdjusted:" destination="Aa5-oc-doK" eventType="valueChanged" id="oUQ-Hi-s2P"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-Pd-q4Q">
-                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sg-Y6-Nvg">
-                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <rect key="frame" x="152" y="60" width="110" height="30"/>
                                 <state key="normal" title="Create And Test">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -148,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSV-Xa-i4l">
-                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <rect key="frame" x="174.5" y="94" width="65" height="30"/>
                                 <state key="normal" title="Test Only">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -157,13 +145,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpz-6V-Cmb">
-                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <rect key="frame" x="154.5" y="132" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFa-j7-pre">
-                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="160.5" width="414" height="701.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Aa5-oc-doK" id="JkH-fc-fld"/>
@@ -178,7 +166,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="trailing" secondItem="fFa-j7-pre" secondAttribute="trailing" id="4sO-YY-yhi"/>
-                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="pAL-Pd-q4Q" secondAttribute="centerX" id="62e-HW-6Ko"/>
                             <constraint firstItem="qpz-6V-Cmb" firstAttribute="top" secondItem="vSV-Xa-i4l" secondAttribute="bottom" constant="8" id="ICH-WE-u0b"/>
                             <constraint firstItem="fFa-j7-pre" firstAttribute="leading" secondItem="1TU-w8-zG8" secondAttribute="leading" id="QnC-lE-YVi"/>
                             <constraint firstItem="vSV-Xa-i4l" firstAttribute="top" secondItem="2sg-Y6-Nvg" secondAttribute="bottom" constant="4" id="Tps-oM-8DW"/>
@@ -186,22 +173,16 @@
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="vSV-Xa-i4l" secondAttribute="centerX" id="UfZ-5T-3Mr"/>
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="qpz-6V-Cmb" secondAttribute="centerX" id="VUV-Ft-Azj"/>
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="bottom" secondItem="fFa-j7-pre" secondAttribute="bottom" id="Wug-u4-LHx"/>
-                            <constraint firstItem="VPD-Gu-F74" firstAttribute="leading" secondItem="1TU-w8-zG8" secondAttribute="leading" constant="20" id="Wxw-WD-aTx"/>
-                            <constraint firstItem="VPD-Gu-F74" firstAttribute="top" secondItem="1TU-w8-zG8" secondAttribute="top" constant="8" id="eAq-NU-lh5"/>
-                            <constraint firstItem="1TU-w8-zG8" firstAttribute="trailing" secondItem="VPD-Gu-F74" secondAttribute="trailing" constant="20" id="kgH-pH-G95"/>
                             <constraint firstItem="fFa-j7-pre" firstAttribute="top" secondItem="qpz-6V-Cmb" secondAttribute="bottom" constant="8" id="m7l-xO-5SH"/>
+                            <constraint firstItem="2sg-Y6-Nvg" firstAttribute="top" secondItem="1TU-w8-zG8" secondAttribute="top" constant="16" id="qV7-3o-ZzD"/>
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="dBr-Gg-MLI" secondAttribute="centerX" id="rXp-G5-LON"/>
                             <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="2sg-Y6-Nvg" secondAttribute="centerX" id="tnG-xR-7Sy"/>
-                            <constraint firstItem="pAL-Pd-q4Q" firstAttribute="top" secondItem="VPD-Gu-F74" secondAttribute="bottom" constant="8" id="u3w-Ps-Ksb"/>
-                            <constraint firstItem="2sg-Y6-Nvg" firstAttribute="top" secondItem="pAL-Pd-q4Q" secondAttribute="bottom" constant="16" id="w0e-gb-8lw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1TU-w8-zG8"/>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="pAL-Pd-q4Q" id="ewa-Ak-0j6"/>
                         <outlet property="createAndTestButton" destination="2sg-Y6-Nvg" id="GRN-ro-vyj"/>
                         <outlet property="resultsTableView" destination="fFa-j7-pre" id="pot-fg-CJs"/>
-                        <outlet property="slider" destination="VPD-Gu-F74" id="W4d-FR-a1H"/>
                         <outlet property="spinner" destination="dBr-Gg-MLI" id="tzn-6X-b0a"/>
                         <outlet property="testOnlyButton" destination="vSV-Xa-i4l" id="IJ0-jr-s89"/>
                         <outlet property="view" destination="fAt-q4-Ygj" id="KPm-Pk-jip"/>
