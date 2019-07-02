@@ -74,7 +74,7 @@ struct AlgoProvider {
         return self.all.map({ SuffixArraySequence(string: $0) })
     }
     
-    var allSearchResults: [(suffix: String, algoName: String)] {
+    var searchStrings: [(suffix: String, algoName: String)] {
         var result = [(suffix: String, algoName: String)]()
         for algo in all {
             let sequence = SuffixArraySequence(string: algo)
@@ -83,7 +83,7 @@ struct AlgoProvider {
                 result.append((suffix: String(suffix), algo))
             }
         }
-        return result
+        return result.sorted(by: { $0.suffix < $1.suffix })
     }
     
     var sortings: [Algo] {

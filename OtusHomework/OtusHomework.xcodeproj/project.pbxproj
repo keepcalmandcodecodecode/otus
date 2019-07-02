@@ -64,6 +64,7 @@
 		D7D33BAB22AD2406009A601A /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BAA22AD2406009A601A /* ProfileNavigationController.swift */; };
 		D7D33BAE22AD250F009A601A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BAD22AD250F009A601A /* MainViewController.swift */; };
 		D7D33BB022AD29BF009A601A /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D33BAF22AD29BF009A601A /* Feed.storyboard */; };
+		D7DE82E322CA8B1700018E3C /* SuffixArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE82E222CA8B1700018E3C /* SuffixArrayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		D7D33BAA22AD2406009A601A /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		D7D33BAD22AD250F009A601A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D7D33BAF22AD29BF009A601A /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		D7DE82E222CA8B1700018E3C /* SuffixArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				8B03100422CA48210003AB4B /* ArrayViewController.swift */,
 				8B03100522CA48210003AB4B /* DictionaryViewController.swift */,
 				8B03100622CA48210003AB4B /* SetViewController.swift */,
+				D7DE82E222CA8B1700018E3C /* SuffixArrayViewController.swift */,
 				8B03100722CA48210003AB4B /* DataStructuresViewController.swift */,
 			);
 			path = DataStructures;
@@ -454,6 +457,7 @@
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
 				8B03100922CA48210003AB4B /* DictionaryViewController.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
+				D7DE82E322CA8B1700018E3C /* SuffixArrayViewController.swift in Sources */,
 				8B030FFD22CA47820003AB4B /* StringGenerator.swift in Sources */,
 				D7AD7A6222BFC77600F8211C /* Array.swift in Sources */,
 				D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */,

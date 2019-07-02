@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4rV-4N-fUN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aa5-oc-doK">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,13 +13,13 @@
         <!--Feed-->
         <scene sceneID="P8X-kp-kkm">
             <objects>
-                <viewController title="Feed" id="4rV-4N-fUN" customClass="FeedViewController" customModule="TaskAboutTablesAndCollections" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" title="Feed" id="4rV-4N-fUN" customClass="FeedViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vu2-pL-mvH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u6r-xa-0Ik">
-                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="4rV-4N-fUN" id="V0Q-ux-sna"/>
@@ -29,12 +29,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u6r-xa-0Ik" firstAttribute="centerX" secondItem="lbF-VZ-0KG" secondAttribute="centerX" id="GdA-sg-WVe"/>
+                            <constraint firstItem="u6r-xa-0Ik" firstAttribute="centerX" secondItem="wD6-qe-Epq" secondAttribute="centerX" id="GdA-sg-WVe"/>
                             <constraint firstItem="u6r-xa-0Ik" firstAttribute="height" secondItem="vu2-pL-mvH" secondAttribute="height" id="O1r-mM-QiS"/>
                             <constraint firstItem="u6r-xa-0Ik" firstAttribute="width" secondItem="vu2-pL-mvH" secondAttribute="width" id="VHC-4I-P4v"/>
-                            <constraint firstItem="u6r-xa-0Ik" firstAttribute="centerY" secondItem="lbF-VZ-0KG" secondAttribute="centerY" id="hvw-ao-CDE"/>
+                            <constraint firstItem="u6r-xa-0Ik" firstAttribute="centerY" secondItem="vu2-pL-mvH" secondAttribute="centerY" id="hvw-ao-CDE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="lbF-VZ-0KG"/>
+                        <viewLayoutGuide key="safeArea" id="wD6-qe-Epq"/>
                     </view>
                     <navigationItem key="navigationItem" id="sLx-kN-J39"/>
                 </viewController>
@@ -45,7 +45,7 @@
         <!--Session Summary View Controller-->
         <scene sceneID="DE0-9v-BfY">
             <objects>
-                <viewController storyboardIdentifier="SessionSummaryViewController" id="uCf-Cf-Nwl" customClass="SessionSummaryViewController" customModule="TaskAboutTablesAndCollections" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SessionSummaryViewController" id="uCf-Cf-Nwl" customClass="SessionSummaryViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KzI-bb-AJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUd-wj-15Q">
-                                <rect key="frame" x="170" y="438" width="74" height="30"/>
+                                <rect key="frame" x="170" y="433" width="74" height="30"/>
                                 <state key="normal" title="Show third">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -72,13 +72,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.38907566750123423" green="0.76463272991193187" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pUd-wj-15Q" firstAttribute="centerY" secondItem="Kjj-Hh-jb8" secondAttribute="centerY" id="Ax0-f3-pAX"/>
-                            <constraint firstItem="fZ8-br-ecA" firstAttribute="top" secondItem="Kjj-Hh-jb8" secondAttribute="top" constant="16" id="SsM-Gv-liO"/>
-                            <constraint firstItem="pUd-wj-15Q" firstAttribute="centerX" secondItem="Kjj-Hh-jb8" secondAttribute="centerX" id="hA5-vm-ngf"/>
-                            <constraint firstItem="Kjj-Hh-jb8" firstAttribute="trailing" secondItem="fZ8-br-ecA" secondAttribute="trailing" id="u7H-1z-dSC"/>
-                            <constraint firstItem="fZ8-br-ecA" firstAttribute="leading" secondItem="Kjj-Hh-jb8" secondAttribute="leading" id="zVk-b9-7C0"/>
+                            <constraint firstItem="pUd-wj-15Q" firstAttribute="centerY" secondItem="KzI-bb-AJB" secondAttribute="centerY" id="Ax0-f3-pAX"/>
+                            <constraint firstItem="fZ8-br-ecA" firstAttribute="top" secondItem="hjI-NI-y8N" secondAttribute="top" constant="16" id="SsM-Gv-liO"/>
+                            <constraint firstItem="pUd-wj-15Q" firstAttribute="centerX" secondItem="hjI-NI-y8N" secondAttribute="centerX" id="hA5-vm-ngf"/>
+                            <constraint firstItem="hjI-NI-y8N" firstAttribute="trailing" secondItem="fZ8-br-ecA" secondAttribute="trailing" id="u7H-1z-dSC"/>
+                            <constraint firstItem="fZ8-br-ecA" firstAttribute="leading" secondItem="hjI-NI-y8N" secondAttribute="leading" id="zVk-b9-7C0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Kjj-Hh-jb8"/>
+                        <viewLayoutGuide key="safeArea" id="hjI-NI-y8N"/>
                     </view>
                     <connections>
                         <outlet property="itemTitleLabel" destination="fZ8-br-ecA" id="QpU-ym-79F"/>
@@ -91,13 +91,13 @@
         <!--Feed Third View Controller-->
         <scene sceneID="Gzp-gU-bhi">
             <objects>
-                <viewController id="Yq5-l9-eoh" customClass="FeedThirdViewController" customModule="TaskAboutTablesAndCollections" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yq5-l9-eoh" customClass="FeedThirdViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykg-iS-Krv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mf-E5-b6F">
-                                <rect key="frame" x="163" y="438" width="88" height="30"/>
+                                <rect key="frame" x="163" y="433" width="88" height="30"/>
                                 <state key="normal" title="Jump to root">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -108,15 +108,108 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.62883018460500917" blue="0.88133565232580768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3mf-E5-b6F" firstAttribute="centerX" secondItem="GeJ-IT-kKp" secondAttribute="centerX" id="Cf4-ff-DdC"/>
-                            <constraint firstItem="3mf-E5-b6F" firstAttribute="centerY" secondItem="GeJ-IT-kKp" secondAttribute="centerY" id="kk9-gX-JsY"/>
+                            <constraint firstItem="3mf-E5-b6F" firstAttribute="centerX" secondItem="61z-ak-gkF" secondAttribute="centerX" id="Cf4-ff-DdC"/>
+                            <constraint firstItem="3mf-E5-b6F" firstAttribute="centerY" secondItem="ykg-iS-Krv" secondAttribute="centerY" id="kk9-gX-JsY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GeJ-IT-kKp"/>
+                        <viewLayoutGuide key="safeArea" id="61z-ak-gkF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPa-Yd-HUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3153.6231884057975" y="-1982.1428571428571"/>
+        </scene>
+        <!--Suffix Array View Controller-->
+        <scene sceneID="9dw-2B-hpT">
+            <objects>
+                <viewController storyboardIdentifier="SuffixArrayViewController" id="Aa5-oc-doK" customClass="SuffixArrayViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fAt-q4-Ygj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="VPD-Gu-F74">
+                                <rect key="frame" x="18" y="52" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderAdjusted:" destination="Aa5-oc-doK" eventType="valueChanged" id="oUQ-Hi-s2P"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-Pd-q4Q">
+                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sg-Y6-Nvg">
+                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <state key="normal" title="Create And Test">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAndTest" destination="Aa5-oc-doK" eventType="touchUpInside" id="Otk-7m-lGC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSV-Xa-i4l">
+                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <state key="normal" title="Test Only">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testOnly" destination="Aa5-oc-doK" eventType="touchUpInside" id="oFH-kZ-hKo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpz-6V-Cmb">
+                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFa-j7-pre">
+                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Aa5-oc-doK" id="JkH-fc-fld"/>
+                                    <outlet property="delegate" destination="Aa5-oc-doK" id="V2m-Xy-51x"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dBr-Gg-MLI">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="trailing" secondItem="fFa-j7-pre" secondAttribute="trailing" id="4sO-YY-yhi"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="pAL-Pd-q4Q" secondAttribute="centerX" id="62e-HW-6Ko"/>
+                            <constraint firstItem="qpz-6V-Cmb" firstAttribute="top" secondItem="vSV-Xa-i4l" secondAttribute="bottom" constant="8" id="ICH-WE-u0b"/>
+                            <constraint firstItem="fFa-j7-pre" firstAttribute="leading" secondItem="1TU-w8-zG8" secondAttribute="leading" id="QnC-lE-YVi"/>
+                            <constraint firstItem="vSV-Xa-i4l" firstAttribute="top" secondItem="2sg-Y6-Nvg" secondAttribute="bottom" constant="4" id="Tps-oM-8DW"/>
+                            <constraint firstAttribute="centerY" secondItem="dBr-Gg-MLI" secondAttribute="centerY" id="Tz3-ig-Xra"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="vSV-Xa-i4l" secondAttribute="centerX" id="UfZ-5T-3Mr"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="qpz-6V-Cmb" secondAttribute="centerX" id="VUV-Ft-Azj"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="bottom" secondItem="fFa-j7-pre" secondAttribute="bottom" id="Wug-u4-LHx"/>
+                            <constraint firstItem="VPD-Gu-F74" firstAttribute="leading" secondItem="1TU-w8-zG8" secondAttribute="leading" constant="20" id="Wxw-WD-aTx"/>
+                            <constraint firstItem="VPD-Gu-F74" firstAttribute="top" secondItem="1TU-w8-zG8" secondAttribute="top" constant="8" id="eAq-NU-lh5"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="trailing" secondItem="VPD-Gu-F74" secondAttribute="trailing" constant="20" id="kgH-pH-G95"/>
+                            <constraint firstItem="fFa-j7-pre" firstAttribute="top" secondItem="qpz-6V-Cmb" secondAttribute="bottom" constant="8" id="m7l-xO-5SH"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="dBr-Gg-MLI" secondAttribute="centerX" id="rXp-G5-LON"/>
+                            <constraint firstItem="1TU-w8-zG8" firstAttribute="centerX" secondItem="2sg-Y6-Nvg" secondAttribute="centerX" id="tnG-xR-7Sy"/>
+                            <constraint firstItem="pAL-Pd-q4Q" firstAttribute="top" secondItem="VPD-Gu-F74" secondAttribute="bottom" constant="8" id="u3w-Ps-Ksb"/>
+                            <constraint firstItem="2sg-Y6-Nvg" firstAttribute="top" secondItem="pAL-Pd-q4Q" secondAttribute="bottom" constant="16" id="w0e-gb-8lw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1TU-w8-zG8"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="pAL-Pd-q4Q" id="ewa-Ak-0j6"/>
+                        <outlet property="createAndTestButton" destination="2sg-Y6-Nvg" id="GRN-ro-vyj"/>
+                        <outlet property="resultsTableView" destination="fFa-j7-pre" id="pot-fg-CJs"/>
+                        <outlet property="slider" destination="VPD-Gu-F74" id="W4d-FR-a1H"/>
+                        <outlet property="spinner" destination="dBr-Gg-MLI" id="tzn-6X-b0a"/>
+                        <outlet property="testOnlyButton" destination="vSV-Xa-i4l" id="IJ0-jr-s89"/>
+                        <outlet property="view" destination="fAt-q4-Ygj" id="KPm-Pk-jip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvH-ol-v29" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354" y="-1229"/>
         </scene>
     </scenes>
 </document>

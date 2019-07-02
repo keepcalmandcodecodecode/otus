@@ -12,7 +12,7 @@
         <!--Array View Controller-->
         <scene sceneID="zty-Iv-Pye">
             <objects>
-                <viewController storyboardIdentifier="ArrayViewController" id="PgN-qi-0zJ" customClass="ArrayViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArrayViewController" id="PgN-qi-0zJ" customClass="ArrayViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8it-Hx-CDS"/>
                         <viewControllerLayoutGuide type="bottom" id="Gyg-Jw-A00"/>
@@ -107,7 +107,7 @@
         <!--Set View Controller-->
         <scene sceneID="JsF-uF-Gle">
             <objects>
-                <viewController storyboardIdentifier="SetViewController" id="J8o-6z-A3C" customClass="SetViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetViewController" id="J8o-6z-A3C" customClass="SetViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RtY-XX-Sd4"/>
                         <viewControllerLayoutGuide type="bottom" id="ho4-M6-Nvy"/>
@@ -197,12 +197,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKb-oB-ljD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="-1385"/>
+            <point key="canvasLocation" x="-487" y="-1408"/>
         </scene>
         <!--Dictionary View Controller-->
         <scene sceneID="MYQ-EK-gV0">
             <objects>
-                <viewController storyboardIdentifier="DictionaryViewController" id="moh-eE-6Ea" customClass="DictionaryViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DictionaryViewController" id="moh-eE-6Ea" customClass="DictionaryViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6lS-rQ-eU2"/>
                         <viewControllerLayoutGuide type="bottom" id="bHv-qs-rVV"/>
