@@ -9,6 +9,7 @@
 import UIKit
 import Social
 import MobileCoreServices
+import SharedPayload
 
 let urlScheme = "igor.otushomework://"
 
@@ -29,15 +30,15 @@ class ShareViewController: SLComposeServiceViewController {
         guard let attachments = item.attachments else {
             return
         }
+        
+        let writer: SharedPayloadWriteable = SharedPayloadRepository()
+        
         let type = kUTTypeText as String
         for attachment in attachments {
             if attachment.hasItemConformingToTypeIdentifier(type) {
                 attachment.loadItem(forTypeIdentifier: type, options: nil) { (loadedItem, error) in
                     if let stringItem = loadedItem as? String {
-                        let userDefaults = UserDefaults.standard
-                        userDefaults.addSuite(named: "group.igor.lepeshkin.otus.homework")
-                        userDefaults.setValue(stringItem, forKeyPath: "sharedText")
-                        userDefaults.synchronize()
+                        writer.writePayload(stringItem)
                     }
                 }
             }

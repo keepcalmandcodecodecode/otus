@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SharedPayload
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,9 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let userDefaults = UserDefaults.standard
-        userDefaults.addSuite(named: "group.igor.lepeshkin.otus.homework")
-        print(userDefaults.value(forKey: "sharedText"))
+        let reader: SharedPayloadReadable = SharedPayloadProvider()
+        if let string = reader.readPayload() {
+            //let storyboard = UIStoryboard(name: "LocalUnitsConverter", bundle: Bundle.main)
+            //self.window?.rootViewController?.show(, sender: <#T##Any?#>)
+        }
         return true
     }
 
