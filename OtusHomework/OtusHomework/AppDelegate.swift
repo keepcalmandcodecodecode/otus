@@ -29,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         print(#function)
+        let userDefaults = UserDefaults.standard
+        userDefaults.addSuite(named: "group.igor.lepeshkin.otus.homework")
+        print(userDefaults.value(forKey: "sharedText"))
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,6 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(#function)
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let userDefaults = UserDefaults.standard
+        userDefaults.addSuite(named: "group.igor.lepeshkin.otus.homework")
+        print(userDefaults.value(forKey: "sharedText"))
+        return true
+    }
 
 }
 

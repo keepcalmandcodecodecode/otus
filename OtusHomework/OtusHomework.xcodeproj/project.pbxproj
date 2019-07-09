@@ -27,6 +27,9 @@
 		8B77379922CBA34300DF74D3 /* ArraySearchManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */; };
 		8B77379B22CBA36800DF74D3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379A22CBA36800DF74D3 /* Search.swift */; };
 		8B77379D22CBA40600DF74D3 /* SearchManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */; };
+		8B7BB78F22D4B15D001D3CDF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7BB78E22D4B15D001D3CDF /* ShareViewController.swift */; };
+		8B7BB79222D4B15D001D3CDF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7BB79022D4B15D001D3CDF /* MainInterface.storyboard */; };
+		8B7BB79622D4B15D001D3CDF /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8B7BB78C22D4B15D001D3CDF /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358A922C0B2D100C9E22D /* UIFont.swift */; };
 		8BD358B022C0C66300C9E22D /* PieChartLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */; };
 		8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */; };
@@ -72,6 +75,30 @@
 		D7DE82E322CA8B1700018E3C /* SuffixArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE82E222CA8B1700018E3C /* SuffixArrayViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8B7BB79422D4B15D001D3CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7A3A65B229DC00C00CF82A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B7BB78B22D4B15D001D3CDF;
+			remoteInfo = Share;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B7BB78722D4B11B001D3CDF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8B7BB79622D4B15D001D3CDF /* Share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArraySequence.swift; sourceTree = "<group>"; };
 		8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayIterator.swift; sourceTree = "<group>"; };
@@ -93,6 +120,12 @@
 		8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySearchManipulator.swift; sourceTree = "<group>"; };
 		8B77379A22CBA36800DF74D3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManipulator.swift; sourceTree = "<group>"; };
+		8B7BB77322D491E9001D3CDF /* OtusHomework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OtusHomework.entitlements; sourceTree = "<group>"; };
+		8B7BB78C22D4B15D001D3CDF /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7BB78E22D4B15D001D3CDF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		8B7BB79122D4B15D001D3CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8B7BB79322D4B15D001D3CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7BB79A22D4C43D001D3CDF /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Share.entitlements; sourceTree = "<group>"; };
 		8BD358A922C0B2D100C9E22D /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8BD358AF22C0C66300C9E22D /* PieChartLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartLayer.swift; sourceTree = "<group>"; };
 		8BF1D9C022B782CB0018A88D /* BenchmarkLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkLayoutProvider.swift; sourceTree = "<group>"; };
@@ -141,6 +174,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B7BB78922D4B15D001D3CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7A3A660229DC00C00CF82A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +267,17 @@
 			path = SuffixArray;
 			sourceTree = "<group>";
 		};
+		8B7BB78D22D4B15D001D3CDF /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				8B7BB79A22D4C43D001D3CDF /* Share.entitlements */,
+				8B7BB78E22D4B15D001D3CDF /* ShareViewController.swift */,
+				8B7BB79022D4B15D001D3CDF /* MainInterface.storyboard */,
+				8B7BB79322D4B15D001D3CDF /* Info.plist */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		8BF1D9B922B77F6B0018A88D /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +335,7 @@
 			children = (
 				D782A37F22A82CDE004F8E17 /* Default-568h@2x.png */,
 				D7A3A665229DC00C00CF82A5 /* OtusHomework */,
+				8B7BB78D22D4B15D001D3CDF /* Share */,
 				D7A3A664229DC00C00CF82A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -292,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				D7A3A663229DC00C00CF82A5 /* OtusHomework.app */,
+				8B7BB78C22D4B15D001D3CDF /* Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +352,7 @@
 		D7A3A665229DC00C00CF82A5 /* OtusHomework */ = {
 			isa = PBXGroup;
 			children = (
+				8B7BB77322D491E9001D3CDF /* OtusHomework.entitlements */,
 				D7AD7A5F22BFC77600F8211C /* Extensions */,
 				D7288E8C22B6843800DBD230 /* Models */,
 				D7288E7822B647A000DBD230 /* Services */,
@@ -386,6 +440,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8B7BB78B22D4B15D001D3CDF /* Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7BB79722D4B15D001D3CDF /* Build configuration list for PBXNativeTarget "Share" */;
+			buildPhases = (
+				8B7BB78822D4B15D001D3CDF /* Sources */,
+				8B7BB78922D4B15D001D3CDF /* Frameworks */,
+				8B7BB78A22D4B15D001D3CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Share;
+			productName = Share;
+			productReference = 8B7BB78C22D4B15D001D3CDF /* Share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D7A3A662229DC00C00CF82A5 /* OtusHomework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7A3A675229DC00D00CF82A5 /* Build configuration list for PBXNativeTarget "OtusHomework" */;
@@ -393,10 +464,12 @@
 				D7A3A65F229DC00C00CF82A5 /* Sources */,
 				D7A3A660229DC00C00CF82A5 /* Frameworks */,
 				D7A3A661229DC00C00CF82A5 /* Resources */,
+				8B7BB78722D4B11B001D3CDF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8B7BB79522D4B15D001D3CDF /* PBXTargetDependency */,
 			);
 			name = OtusHomework;
 			productName = TaskAboutStoryboards;
@@ -413,8 +486,21 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = developer;
 				TargetAttributes = {
+					8B7BB78B22D4B15D001D3CDF = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					D7A3A662229DC00C00CF82A5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -432,11 +518,20 @@
 			projectRoot = "";
 			targets = (
 				D7A3A662229DC00C00CF82A5 /* OtusHomework */,
+				8B7BB78B22D4B15D001D3CDF /* Share */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B7BB78A22D4B15D001D3CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7BB79222D4B15D001D3CDF /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7A3A661229DC00C00CF82A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,6 +553,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B7BB78822D4B15D001D3CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7BB78F22D4B15D001D3CDF /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7A3A65F229DC00C00CF82A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,7 +622,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8B7BB79522D4B15D001D3CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B7BB78B22D4B15D001D3CDF /* Share */;
+			targetProxy = 8B7BB79422D4B15D001D3CDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		8B7BB79022D4B15D001D3CDF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B7BB79122D4B15D001D3CDF /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		D7A3A66A229DC00C00CF82A5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -539,6 +658,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8B7BB79822D4B15D001D3CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q26PSWQ2V;
+				INFOPLIST_FILE = Share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.igor.otushomework.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B7BB79922D4B15D001D3CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q26PSWQ2V;
+				INFOPLIST_FILE = Share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.igor.otushomework.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D7A3A673229DC00D00CF82A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -658,15 +819,20 @@
 		D7A3A676229DC00D00CF82A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OtusHomework/OtusHomework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q26PSWQ2V;
 				INFOPLIST_FILE = "$(SRCROOT)/OtusHomework/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easy.OtusHomework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.igor.otushomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -675,15 +841,20 @@
 		D7A3A677229DC00D00CF82A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OtusHomework/OtusHomework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q26PSWQ2V;
 				INFOPLIST_FILE = "$(SRCROOT)/OtusHomework/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easy.OtusHomework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.igor.otushomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -692,6 +863,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B7BB79722D4B15D001D3CDF /* Build configuration list for PBXNativeTarget "Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7BB79822D4B15D001D3CDF /* Debug */,
+				8B7BB79922D4B15D001D3CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D7A3A65E229DC00C00CF82A5 /* Build configuration list for PBXProject "OtusHomework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
