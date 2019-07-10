@@ -23,6 +23,8 @@
 		8B03100A22CA48210003AB4B /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100622CA48210003AB4B /* SetViewController.swift */; };
 		8B03100B22CA48210003AB4B /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03100722CA48210003AB4B /* DataStructuresViewController.swift */; };
 		8B03100D22CA48390003AB4B /* DataStructures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03100C22CA48390003AB4B /* DataStructures.storyboard */; };
+		8B1D29E922D607B300C834CD /* LocalUnitsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D29E822D607B300C834CD /* LocalUnitsConverter.swift */; };
+		8B1D29EB22D6094600C834CD /* UnitsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D29EA22D6094600C834CD /* UnitsFinder.swift */; };
 		8B77379722CB8AAB00DF74D3 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */; };
 		8B77379922CBA34300DF74D3 /* ArraySearchManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */; };
 		8B77379B22CBA36800DF74D3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77379A22CBA36800DF74D3 /* Search.swift */; };
@@ -141,6 +143,8 @@
 		8B03100622CA48210003AB4B /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		8B03100722CA48210003AB4B /* DataStructuresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
 		8B03100C22CA48390003AB4B /* DataStructures.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataStructures.storyboard; sourceTree = "<group>"; };
+		8B1D29E822D607B300C834CD /* LocalUnitsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUnitsConverter.swift; sourceTree = "<group>"; };
+		8B1D29EA22D6094600C834CD /* UnitsFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsFinder.swift; sourceTree = "<group>"; };
 		8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySearchManipulator.swift; sourceTree = "<group>"; };
 		8B77379A22CBA36800DF74D3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 			children = (
 				8B7BB7D222D4DFB3001D3CDF /* LocalUnitsConverter.storyboard */,
 				8B7BB7D422D4E248001D3CDF /* LocalUnitsConverterViewController.swift */,
+				8B1D29E822D607B300C834CD /* LocalUnitsConverter.swift */,
+				8B1D29EA22D6094600C834CD /* UnitsFinder.swift */,
 			);
 			path = LocalUnitsConverter;
 			sourceTree = "<group>";
@@ -725,6 +731,7 @@
 				8B030FFB22CA47820003AB4B /* ArrayManipulator.swift in Sources */,
 				D7D33BAB22AD2406009A601A /* ProfileNavigationController.swift in Sources */,
 				D7D33BA222ACF8C8009A601A /* ProfileViewController.swift in Sources */,
+				8B1D29E922D607B300C834CD /* LocalUnitsConverter.swift in Sources */,
 				8B03100822CA48210003AB4B /* ArrayViewController.swift in Sources */,
 				8B03100222CA47820003AB4B /* Profiler.swift in Sources */,
 				D7288E8722B6779400DBD230 /* TimerItemsProvider.swift in Sources */,
@@ -733,6 +740,7 @@
 				8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */,
 				8B03100122CA47820003AB4B /* SetManipulator.swift in Sources */,
 				D7D33BA922ACFCAF009A601A /* FeedThirdViewController.swift in Sources */,
+				8B1D29EB22D6094600C834CD /* UnitsFinder.swift in Sources */,
 				8B030FFE22CA47820003AB4B /* SwiftDictionaryManipulator.swift in Sources */,
 				D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */,
 				8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */,

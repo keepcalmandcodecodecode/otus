@@ -32,7 +32,9 @@ public final class SharedPayloadProvider: SharedPayloadReadable, SharedPayloadWr
     
     public func readPayload() -> String? {
         let userDefaults = UserDefaults(suiteName: applicationGroupID)
-        return userDefaults?.string(forKey: payloadKey)
+        let string: String? = userDefaults?.string(forKey: payloadKey)
+        userDefaults?.removeObject(forKey: payloadKey)
+        return string
     }
     
 }

@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         print(#function)
+        if let controller = self.window?.rootViewController as? SplitViewController {
+            controller.didBecomeActive()
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
