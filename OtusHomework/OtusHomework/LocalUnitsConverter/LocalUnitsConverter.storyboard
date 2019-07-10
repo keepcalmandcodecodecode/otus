@@ -32,6 +32,9 @@
                                     <segment title="FR"/>
                                     <segment title="CN"/>
                                 </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="2Pv-fH-1le" eventType="valueChanged" id="l81-8y-3R9"/>
+                                </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMX-EO-ump">
                                 <rect key="frame" x="16" y="150" width="382" height="696"/>
@@ -55,6 +58,7 @@
                         <viewLayoutGuide key="safeArea" id="d4T-Vo-Mrh"/>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="veo-5O-7OE" id="33s-KS-gq2"/>
                         <outlet property="textView" destination="QMX-EO-ump" id="gHO-Fy-pjh"/>
                     </connections>
                 </viewController>

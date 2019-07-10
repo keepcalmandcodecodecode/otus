@@ -11,12 +11,15 @@ import UIKit
 class LocalUnitsConverterViewController: UIViewController {
     
     @IBOutlet var textView: UITextView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
 
     var stringToConvert: String? = nil {
         didSet {
             updateTextView()
         }
     }
+    
+    //MARK: ViewController lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +29,37 @@ class LocalUnitsConverterViewController: UIViewController {
         updateTextView()
     }
     
+    //MARK: Actions
+    
     @IBAction func closeScreen(sender: Any?) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func tabChanged(_ sender: Any) {
+        self.updateTextView()
+    }
 
+    //MARK: Private
+    
     private func updateTextView() {
-        self.textView?.text = self.stringToConvert
+        if self.segmentedControl == nil || self.textView == nil {
+            return
+        }
+        let converter
+            = self.converter(index: self.segmentedControl.selectedSegmentIndex)
+        self.textView.text = converter.convert()
+    }
+    
+    private func converter(index: Int) -> Converter {
+        switch index {
+        case 0:
+            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "en-US"))
+        case 1:
+            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "fr-FR"))
+        case 2:
+            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "zh_Hant_TW"))
+        default:
+            return NoneConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "ru-RU"))
+        }
     }
 }
