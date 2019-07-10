@@ -30,9 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         print(#function)
-        let userDefaults = UserDefaults.standard
-        userDefaults.addSuite(named: "group.igor.lepeshkin.otus.homework")
-        print(userDefaults.value(forKey: "sharedText"))
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -49,11 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let reader: SharedPayloadReadable = SharedPayloadProvider()
-        if let string = reader.readPayload() {
-            //let storyboard = UIStoryboard(name: "LocalUnitsConverter", bundle: Bundle.main)
-            //self.window?.rootViewController?.show(, sender: <#T##Any?#>)
-        }
         return true
     }
 

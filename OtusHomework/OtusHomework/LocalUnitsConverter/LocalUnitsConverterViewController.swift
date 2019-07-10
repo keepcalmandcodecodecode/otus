@@ -10,9 +10,11 @@ import UIKit
 
 class LocalUnitsConverterViewController: UIViewController {
 
+    var stringToConvert: String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(stringToConvert)
         // Do any additional setup after loading the view.
     }
     

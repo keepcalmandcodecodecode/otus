@@ -22,17 +22,17 @@ public final class SharedPayloadProvider: SharedPayloadReadable, SharedPayloadWr
     private let applicationGroupID = "group.igor.lepeshkin.otus.homework"
     private let payloadKey = "sharedText"
     
+    public init() {}
+    
     public func writePayload(_ payload: String) {
-        let userDefaults = UserDefaults.standard
-        userDefaults.addSuite(named: applicationGroupID)
-        userDefaults.setValue(payload, forKeyPath: payloadKey)
-        userDefaults.synchronize()
+        let userDefaults = UserDefaults(suiteName: applicationGroupID)
+        userDefaults?.set(payload, forKey: payloadKey)
+        userDefaults?.synchronize()
     }
     
     public func readPayload() -> String? {
-        let userDefaults = UserDefaults.standard
-        userDefaults.addSuite(named: applicationGroupID)
-        return userDefaults.string(forKey: payloadKey)
+        let userDefaults = UserDefaults(suiteName: applicationGroupID)
+        return userDefaults?.string(forKey: payloadKey)
     }
     
 }

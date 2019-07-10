@@ -43,6 +43,7 @@
 		8BF1D9C922B78D630018A88D /* StagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9C822B78D620018A88D /* StagLayout.swift */; };
 		8BF1D9D122B790F00018A88D /* LayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D022B790F00018A88D /* LayoutController.swift */; };
 		8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1D9D422B7A5810018A88D /* NRowLayout.swift */; };
+		D707E72D22D52267009EB93B /* SharedPayload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7BB7B222D4D9CF001D3CDF /* SharedPayload.framework */; };
 		D721129022CBE93900437EFC /* SearchArrayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721128F22CBE93900437EFC /* SearchArrayAdapter.swift */; };
 		D7288E7122B584AD00DBD230 /* Benchmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7022B584AD00DBD230 /* Benchmark.storyboard */; };
 		D7288E7322B584CF00DBD230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7288E7222B584CF00DBD230 /* Profile.storyboard */; };
@@ -208,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D707E72D22D52267009EB93B /* SharedPayload.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +348,13 @@
 			path = Layouts;
 			sourceTree = "<group>";
 		};
+		D707E72C22D52267009EB93B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7288E7822B647A000DBD230 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +404,7 @@
 				8B7BB78D22D4B15D001D3CDF /* Share */,
 				8B7BB7B322D4D9CF001D3CDF /* SharedPayload */,
 				D7A3A664229DC00C00CF82A5 /* Products */,
+				D707E72C22D52267009EB93B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -821,6 +831,7 @@
 		8B7BB7BC22D4D9CF001D3CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -851,6 +862,7 @@
 		8B7BB7BD22D4D9CF001D3CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

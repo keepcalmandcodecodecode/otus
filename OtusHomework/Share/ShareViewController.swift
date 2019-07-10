@@ -31,21 +31,29 @@ class ShareViewController: SLComposeServiceViewController {
             return
         }
         
-        let writer: SharedPayloadWriteable = SharedPayloadRepository()
+        let writer: SharedPayloadWriteable = SharedPayloadProvider()
         
         let type = kUTTypeText as String
+        
+        let dispatchGroup = DispatchGroup()
+        
         for attachment in attachments {
             if attachment.hasItemConformingToTypeIdentifier(type) {
+                dispatchGroup.enter()
                 attachment.loadItem(forTypeIdentifier: type, options: nil) { (loadedItem, error) in
                     if let stringItem = loadedItem as? String {
                         writer.writePayload(stringItem)
                     }
+                    dispatchGroup.leave()
                 }
             }
         }
-        let u = URL(string: urlScheme)
-        if let url = u {
-            _ = openURL(url)
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            let u = URL(string: urlScheme)
+            if let url = u {
+                _ = self.openURL(url)
+            }
         }
     }
 
