@@ -57,7 +57,6 @@ class SuffixArrayManipulator {
         return results
     }
     
-    
 }
 
 // MARK : - Measure time

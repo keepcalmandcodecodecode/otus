@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8B030FE922CA02BA0003AB4B /* SuffixArraySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */; };
-		8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */; };
 		8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */; };
 		8B030FFB22CA47820003AB4B /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF122CA47820003AB4B /* ArrayManipulator.swift */; };
 		8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */; };
@@ -74,7 +73,6 @@
 
 /* Begin PBXFileReference section */
 		8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArraySequence.swift; sourceTree = "<group>"; };
-		8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayIterator.swift; sourceTree = "<group>"; };
 		8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoProvider.swift; sourceTree = "<group>"; };
 		8B030FF122CA47820003AB4B /* ArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
 		8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */,
-				8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */,
 				8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */,
 				8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */,
 				8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */,
@@ -477,7 +474,6 @@
 				8B03100022CA47820003AB4B /* SwiftSetManipulator.swift in Sources */,
 				8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */,
 				D7288E8422B674EF00DBD230 /* TimerCollectionViewCell.swift in Sources */,
-				8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */,
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
 				8B03100922CA48210003AB4B /* DictionaryViewController.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
