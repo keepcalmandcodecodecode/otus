@@ -11,10 +11,6 @@ import UIKit
 struct SummaryItemsProvider {
     
     func items() -> [String] {
-        var array = [String]()
-        for i in 0..<30 {
-            array.append("item \(i)")
-        }
-        return array
+        return ["Suffix Array", "Set", "Array", "Dictionary"]
     }
 }

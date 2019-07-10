@@ -39,13 +39,3 @@ extension SessionSummaryViewController {
     }
     
 }
-
-// MARK: - UISearchResultsUpdating Delegate
-
-extension SessionSummaryViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        searchController.searchBar.text
-    }
-    
-    
-}
