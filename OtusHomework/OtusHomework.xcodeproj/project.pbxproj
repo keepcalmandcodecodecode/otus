@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8B030FE922CA02BA0003AB4B /* SuffixArraySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */; };
-		8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */; };
 		8B030FED22CA03D10003AB4B /* AlgoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */; };
 		8B030FFB22CA47820003AB4B /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF122CA47820003AB4B /* ArrayManipulator.swift */; };
 		8B030FFC22CA47820003AB4B /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */; };
@@ -78,7 +77,6 @@
 		D7D33BA022ACF466009A601A /* StatusBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33B9F22ACF466009A601A /* StatusBarBehavior.swift */; };
 		D7D33BA222ACF8C8009A601A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BA122ACF8C8009A601A /* ProfileViewController.swift */; };
 		D7D33BA522ACFC9A009A601A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BA422ACFC9A009A601A /* FeedViewController.swift */; };
-		D7D33BA922ACFCAF009A601A /* FeedThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BA822ACFCAF009A601A /* FeedThirdViewController.swift */; };
 		D7D33BAB22AD2406009A601A /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BAA22AD2406009A601A /* ProfileNavigationController.swift */; };
 		D7D33BAE22AD250F009A601A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D33BAD22AD250F009A601A /* MainViewController.swift */; };
 		D7D33BB022AD29BF009A601A /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D33BAF22AD29BF009A601A /* Feed.storyboard */; };
@@ -129,7 +127,6 @@
 
 /* Begin PBXFileReference section */
 		8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArraySequence.swift; sourceTree = "<group>"; };
-		8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayIterator.swift; sourceTree = "<group>"; };
 		8B030FEC22CA03D10003AB4B /* AlgoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoProvider.swift; sourceTree = "<group>"; };
 		8B030FF122CA47820003AB4B /* ArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
 		8B030FF222CA47820003AB4B /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
@@ -313,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				8B030FE822CA02BA0003AB4B /* SuffixArraySequence.swift */,
-				8B030FEA22CA02DA0003AB4B /* SuffixArrayIterator.swift */,
 				8B77379622CB8AAB00DF74D3 /* SuffixArrayManipulator.swift */,
 				8B77379822CBA34300DF74D3 /* ArraySearchManipulator.swift */,
 				8B77379C22CBA40600DF74D3 /* SearchManipulator.swift */,
@@ -720,7 +716,6 @@
 				8B03100022CA47820003AB4B /* SwiftSetManipulator.swift in Sources */,
 				8BD358AA22C0B2D100C9E22D /* UIFont.swift in Sources */,
 				D7288E8422B674EF00DBD230 /* TimerCollectionViewCell.swift in Sources */,
-				8B030FEB22CA02DA0003AB4B /* SuffixArrayIterator.swift in Sources */,
 				8BF1D9D522B7A5810018A88D /* NRowLayout.swift in Sources */,
 				8B03100922CA48210003AB4B /* DictionaryViewController.swift in Sources */,
 				D7288E7522B5850600DBD230 /* ViewControllerLifecycleBehavior.swift in Sources */,
@@ -751,7 +746,6 @@
 				8BF1D9C122B782CB0018A88D /* BenchmarkLayoutProvider.swift in Sources */,
 				8B03100122CA47820003AB4B /* SetManipulator.swift in Sources */,
 				D707E72F22D683F2009EB93B /* String.swift in Sources */,
-				D7D33BA922ACFCAF009A601A /* FeedThirdViewController.swift in Sources */,
 				8B1D29EB22D6094600C834CD /* UnitsFinder.swift in Sources */,
 				8B030FFE22CA47820003AB4B /* SwiftDictionaryManipulator.swift in Sources */,
 				D7AD7A6C22BFC8C200F8211C /* CGPoint.swift in Sources */,
