@@ -300,6 +300,15 @@
 			path = DataStructures;
 			sourceTree = "<group>";
 		};
+		8B64C97922D71A0D0031EB23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B1D29E822D607B300C834CD /* LocalUnitsConverter.swift */,
+				8B1D29EA22D6094600C834CD /* UnitsFinder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8B77379522CB8A8400DF74D3 /* SuffixArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,8 +348,7 @@
 			children = (
 				8B7BB7D222D4DFB3001D3CDF /* LocalUnitsConverter.storyboard */,
 				8B7BB7D422D4E248001D3CDF /* LocalUnitsConverterViewController.swift */,
-				8B1D29E822D607B300C834CD /* LocalUnitsConverter.swift */,
-				8B1D29EA22D6094600C834CD /* UnitsFinder.swift */,
+				8B64C97922D71A0D0031EB23 /* Services */,
 			);
 			path = LocalUnitsConverter;
 			sourceTree = "<group>";

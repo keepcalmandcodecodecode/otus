@@ -38,12 +38,14 @@ struct UnitsFinder {
         for regex in regexs {
             guard let pattern = RegExPattern(rawValue: regex.pattern) else { continue }
             let matches = regex.matches(in: text, options: [], range: range)
+            print(regex.pattern)
             for match in matches {
                 if match.range.location == NSNotFound {
                     continue
                 }
                 guard let range = Range(match.range, in: text) else { continue }
                 let substring = String(text[range.lowerBound..<range.upperBound])
+                print(substring)
                 let parsedItem = ParsedItem(type: pattern, string: substring, range: range)
                 result.append(parsedItem)
             }

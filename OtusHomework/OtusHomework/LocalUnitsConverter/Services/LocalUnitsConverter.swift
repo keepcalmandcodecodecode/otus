@@ -76,8 +76,7 @@ struct LocalUnitConverter: Converter {
                 guard let doubleValue = numberFormatter.number(from: value)?.doubleValue else { continue }
                 guard let type = self.measurement(by: parsedItems[i].type) else { continue }
                 let measurement = Measurement(value: doubleValue, unit: type)
-                let formatter = MeasurementFormatter()
-                formatter.locale = toLocale
+                let formatter = LocalUnitConverter.measurementFormatter(locale: toLocale)
                 
                 if i == (parsedItems.count - 1) {
                     let substring = String(text[parsedItems[i].range.upperBound..<text.endIndex])
@@ -113,7 +112,7 @@ struct LocalUnitConverter: Converter {
     private static func dateFormatter(locale: Locale) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.calendar = Calendar.current
-        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "dd MMMM yyyy", options: 0, locale: locale)
         formatter.locale = locale
         return formatter
     }
