@@ -51,15 +51,16 @@ class LocalUnitsConverterViewController: UIViewController {
     }
     
     private func converter(index: Int) -> Converter {
+        let fromLocale = Locale(identifier: "ru-RU")
         switch index {
         case 0:
-            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "en-US"))
+            return LocalUnitConverter(text: self.stringToConvert, fromLocale: fromLocale, toLocale: Locale(identifier: "en-US"))
         case 1:
-            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "fr-FR"))
+            return LocalUnitConverter(text: self.stringToConvert, fromLocale: fromLocale, toLocale: Locale(identifier: "fr-FR"))
         case 2:
-            return LocalUnitConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "zh_Hant_TW"))
+            return LocalUnitConverter(text: self.stringToConvert, fromLocale: fromLocale, toLocale: Locale(identifier: "zh_Hant_TW"))
         default:
-            return NoneConverter(text: self.stringToConvert ?? "", locale: Locale(identifier: "ru-RU"))
+            return LocalUnitConverter(text: self.stringToConvert, fromLocale: fromLocale, toLocale: Locale(identifier: "ru-RU"))
         }
     }
 }

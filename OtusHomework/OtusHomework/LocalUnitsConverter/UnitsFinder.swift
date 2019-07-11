@@ -10,10 +10,10 @@ import Foundation
 
 enum RegExPattern: String {
     case date = #"[0-9]+\ ((я|Я)нваря|(ф|Ф)евраля|(м|М)арта|(а|А)апреля|(м|М)ая|(и|И)юля|(и|И)юня|(а|А)вгуста|(с|С)ентября|(о|О)ктября|(н|Н)оября|(д|Д)екабря) [0-9]+"#
-    case mLength = #"[0-9][0-9\ ,0-9]+( м)[^а-я]"#
-    case mmLength = #"[0-9][0-9\ ,0-9]+( см)[^а-я]"#
-    case kmLength = #"[0-9][0-9\ ,0-9]+( км)[^а-я]"#
-    case smLength = #"[0-9][0-9\ ,0-9]+( мм)[^а-я]"#
+    case mLength = #"[\d][\d,\s]*м(?=[^а-я])"#
+    case mmLength = #"[\d][\d,\s]*мм(?=[^а-я])"#
+    case kmLength = #"[\d][\d,\s]*км(?=[^а-я])"#
+    case smLength = #"[\d][\d,\s]*см(?=[^а-я])"#
 }
 
 struct ParsedItem {
@@ -28,7 +28,7 @@ struct UnitsFinder {
     func findDatesAndLengths() -> [ParsedItem] {
         var result = [ParsedItem]()
         guard let text = text else { return result }
-        let patterns = [RegExPattern.date]
+        let patterns = [RegExPattern.date, RegExPattern.kmLength, RegExPattern.mLength, RegExPattern.mmLength, RegExPattern.smLength]
         let regexs = patterns
             .map({ pattern in
                 return try? NSRegularExpression(pattern: pattern.rawValue, options: [])
