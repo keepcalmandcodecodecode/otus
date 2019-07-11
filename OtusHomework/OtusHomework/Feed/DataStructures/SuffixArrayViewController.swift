@@ -19,8 +19,6 @@ private enum Rows: Int {
 }
 
 class SuffixArrayViewController: DataStructuresViewController {
-
-    var numberOfOccurences = 1
     
     let suffixArrayManipulator = SuffixArrayManipulator()
     let arraySearchManipulator = ArraySearchManipulator()
@@ -38,24 +36,7 @@ class SuffixArrayViewController: DataStructuresViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createAndTestButton.setTitle("Create SuffixArray and Test", for: UIControl.State())
-        self.slider?.minimumValue = 0
-        self.slider?.maximumValue = 100
-        self.slider?.value = 1
         self.updateCountLabel()
-    }
-    
-    override func updateCountLabel() {
-        if numberOfOccurences == 0 {
-            countLabel?.text = "Number of occurences: Infinity"
-        } else {
-            countLabel?.text = "Number of occurences: \(numberOfOccurences)"
-        }
-    }
-    
-    override func sliderAdjusted(_ adjustedSlider: UISlider) {
-        numberOfOccurences = Int(ceil(adjustedSlider.value))
-        testOnlyButton.isEnabled = false
-        updateCountLabel()
     }
     
     override func create(_ size: Int) {
@@ -75,19 +56,19 @@ class SuffixArrayViewController: DataStructuresViewController {
         }()
         
         search3symbolsTime = firstTest.reduce(TimeInterval(0)) {
-            return $0 + suffixArrayManipulator.searchWithMeasuring(searchString: $1, maxOccurencies: self.numberOfOccurences).0
+            return $0 + suffixArrayManipulator.searchWithMeasuring(searchString: $1, maxOccurencies: self.numberOfItems).0
         }
         
         arraySearch3symbolsTime = firstTest.reduce(TimeInterval(0)) {
-            return $0 + arraySearchManipulator.searchWithMeasuring(searchString: $1, maxOccurencies: self.numberOfOccurences).0
+            return $0 + arraySearchManipulator.searchWithMeasuring(searchString: $1, maxOccurencies: self.numberOfItems).0
         }
         
         let fourthTest = "Sort"
-        var searchResult = suffixArrayManipulator.searchWithMeasuring(searchString: fourthTest, maxOccurencies: self.numberOfOccurences)
+        var searchResult = suffixArrayManipulator.searchWithMeasuring(searchString: fourthTest, maxOccurencies: self.numberOfItems)
         search3symbolsWithInfiniteOccurenciesTime = searchResult.0
         search3symbolsWithInfiniteOccurenciesCount = searchResult.1.count
         
-        searchResult = arraySearchManipulator.searchWithMeasuring(searchString: fourthTest, maxOccurencies: self.numberOfOccurences)
+        searchResult = arraySearchManipulator.searchWithMeasuring(searchString: fourthTest, maxOccurencies: self.numberOfItems)
         arraySearch3symbolsWithInfiniteOccurenciesTime = searchResult.0
         arraySearch3symbolsWithInfiniteOccurenciesCount = searchResult.1.count
     }
