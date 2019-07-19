@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,28 +14,18 @@
         <scene sceneID="zty-Iv-Pye">
             <objects>
                 <viewController storyboardIdentifier="ArrayViewController" id="PgN-qi-0zJ" customClass="ArrayViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8it-Hx-CDS"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gyg-Jw-A00"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hq0-nK-iaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-W7-XzU">
-                                <rect key="frame" x="18" y="52" width="378" height="31"/>
-                                <connections>
-                                    <action selector="sliderAdjusted:" destination="PgN-qi-0zJ" eventType="valueChanged" id="nDO-pR-f7u"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-vy-vlF">
-                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <rect key="frame" x="161" y="88" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-oE-lf4">
-                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <rect key="frame" x="152" y="124.5" width="110" height="30"/>
                                 <state key="normal" title="Create And Test">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDN-hZ-gTw">
-                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <rect key="frame" x="174.5" y="158.5" width="65" height="30"/>
                                 <state key="normal" title="Test Only">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -52,13 +43,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGa-2Y-Idq">
-                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <rect key="frame" x="154.5" y="196.5" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-FY-Y0p">
-                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="225" width="414" height="637"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="PgN-qi-0zJ" id="YDa-mB-OUA"/>
@@ -69,67 +60,86 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8oK-vr-T0y">
+                                <rect key="frame" x="40" y="52" width="334" height="29"/>
+                                <segments>
+                                    <segment title="100"/>
+                                    <segment title="1К"/>
+                                    <segment title="10К"/>
+                                    <segment title="100К"/>
+                                    <segment title="1М"/>
+                                    <segment title="100М"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="PgN-qi-0zJ" eventType="valueChanged" id="0Km-wd-roW"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="TGa-2Y-Idq" secondAttribute="centerX" id="1yd-fO-KCs"/>
-                            <constraint firstAttribute="centerX" secondItem="OE7-vy-vlF" secondAttribute="centerX" id="2Q1-aB-nKb"/>
-                            <constraint firstItem="OE7-vy-vlF" firstAttribute="top" secondItem="MxF-W7-XzU" secondAttribute="bottom" constant="8" id="6U6-8I-L1D"/>
-                            <constraint firstAttribute="trailing" secondItem="GcH-FY-Y0p" secondAttribute="trailing" id="7GK-J7-bpU"/>
-                            <constraint firstAttribute="centerX" secondItem="DdI-gT-Sst" secondAttribute="centerX" id="9Yj-6K-oB9"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="centerX" secondItem="TGa-2Y-Idq" secondAttribute="centerX" id="1yd-fO-KCs"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="centerX" secondItem="OE7-vy-vlF" secondAttribute="centerX" id="2Q1-aB-nKb"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="trailing" secondItem="GcH-FY-Y0p" secondAttribute="trailing" id="7GK-J7-bpU"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="centerX" secondItem="DdI-gT-Sst" secondAttribute="centerX" id="9Yj-6K-oB9"/>
+                            <constraint firstItem="OE7-vy-vlF" firstAttribute="top" secondItem="8oK-vr-T0y" secondAttribute="bottom" constant="8" id="B9N-1P-1M0"/>
                             <constraint firstItem="TGa-2Y-Idq" firstAttribute="top" secondItem="CDN-hZ-gTw" secondAttribute="bottom" constant="8" id="Cx0-ej-tVF"/>
                             <constraint firstAttribute="centerY" secondItem="DdI-gT-Sst" secondAttribute="centerY" id="Hd0-oK-17z"/>
                             <constraint firstItem="S9e-oE-lf4" firstAttribute="top" secondItem="OE7-vy-vlF" secondAttribute="bottom" constant="16" id="KMV-Pd-AlM"/>
-                            <constraint firstItem="MxF-W7-XzU" firstAttribute="top" secondItem="8it-Hx-CDS" secondAttribute="bottom" constant="8" id="Lym-MY-Dx8"/>
-                            <constraint firstAttribute="centerX" secondItem="S9e-oE-lf4" secondAttribute="centerX" id="bqp-k9-2hO"/>
+                            <constraint firstItem="8oK-vr-T0y" firstAttribute="leading" secondItem="Hq0-nK-iaU" secondAttribute="leadingMargin" constant="20" id="RlR-jz-iCL"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="centerX" secondItem="S9e-oE-lf4" secondAttribute="centerX" id="bqp-k9-2hO"/>
+                            <constraint firstItem="8oK-vr-T0y" firstAttribute="top" secondItem="UCc-Rz-ygz" secondAttribute="top" constant="8" id="fWe-mz-9HO"/>
                             <constraint firstItem="CDN-hZ-gTw" firstAttribute="top" secondItem="S9e-oE-lf4" secondAttribute="bottom" constant="4" id="iXZ-6n-5jR"/>
-                            <constraint firstItem="GcH-FY-Y0p" firstAttribute="leading" secondItem="Hq0-nK-iaU" secondAttribute="leading" id="lIv-O8-A5I"/>
-                            <constraint firstAttribute="trailing" secondItem="MxF-W7-XzU" secondAttribute="trailing" constant="20" id="nQN-zb-5Iw"/>
-                            <constraint firstAttribute="centerX" secondItem="CDN-hZ-gTw" secondAttribute="centerX" id="nfP-OI-tCg"/>
-                            <constraint firstItem="Gyg-Jw-A00" firstAttribute="top" secondItem="GcH-FY-Y0p" secondAttribute="bottom" id="qn9-Jx-fwk"/>
-                            <constraint firstItem="MxF-W7-XzU" firstAttribute="leading" secondItem="Hq0-nK-iaU" secondAttribute="leading" constant="20" id="sMw-gj-IGA"/>
+                            <constraint firstItem="GcH-FY-Y0p" firstAttribute="leading" secondItem="UCc-Rz-ygz" secondAttribute="leading" id="lIv-O8-A5I"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="centerX" secondItem="CDN-hZ-gTw" secondAttribute="centerX" id="nfP-OI-tCg"/>
+                            <constraint firstItem="UCc-Rz-ygz" firstAttribute="bottom" secondItem="GcH-FY-Y0p" secondAttribute="bottom" id="qn9-Jx-fwk"/>
                             <constraint firstItem="GcH-FY-Y0p" firstAttribute="top" secondItem="TGa-2Y-Idq" secondAttribute="bottom" constant="8" id="xqX-C4-82S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8oK-vr-T0y" secondAttribute="trailing" constant="20" id="yK6-XE-GED"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="UCc-Rz-ygz"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="OE7-vy-vlF" id="9en-Dy-WYX"/>
                         <outlet property="createAndTestButton" destination="S9e-oE-lf4" id="JtB-U9-SZK"/>
                         <outlet property="resultsTableView" destination="GcH-FY-Y0p" id="AfR-zR-Dkp"/>
-                        <outlet property="slider" destination="MxF-W7-XzU" id="wDi-WO-nKG"/>
+                        <outlet property="segmentedControl" destination="8oK-vr-T0y" id="34u-N6-i7e"/>
                         <outlet property="spinner" destination="DdI-gT-Sst" id="va1-4R-fN4"/>
                         <outlet property="testOnlyButton" destination="CDN-hZ-gTw" id="B47-V0-dXd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZs-ih-07S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1299" y="-1385"/>
+            <point key="canvasLocation" x="-1290" y="-1408"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="JsF-uF-Gle">
             <objects>
                 <viewController storyboardIdentifier="SetViewController" id="J8o-6z-A3C" customClass="SetViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RtY-XX-Sd4"/>
-                        <viewControllerLayoutGuide type="bottom" id="ho4-M6-Nvy"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4j4-bD-nDh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-Mk-vJW">
-                                <rect key="frame" x="18" y="52" width="378" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-R1-yhr">
+                                <rect key="frame" x="20" y="52" width="374" height="29"/>
+                                <segments>
+                                    <segment title="100"/>
+                                    <segment title="1К"/>
+                                    <segment title="10К"/>
+                                    <segment title="100К"/>
+                                    <segment title="1М"/>
+                                    <segment title="100М"/>
+                                </segments>
                                 <connections>
-                                    <action selector="sliderAdjusted:" destination="J8o-6z-A3C" eventType="valueChanged" id="xVq-Am-Zwx"/>
+                                    <action selector="tabChanged:" destination="J8o-6z-A3C" eventType="valueChanged" id="oZ2-jN-zLp"/>
                                 </connections>
-                            </slider>
+                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFd-zM-6ek">
-                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <rect key="frame" x="161" y="88" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43a-9j-Byy">
-                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <rect key="frame" x="152" y="124.5" width="110" height="30"/>
                                 <state key="normal" title="Create And Test">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -138,7 +148,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0K-AB-qXO">
-                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <rect key="frame" x="174.5" y="158.5" width="65" height="30"/>
                                 <state key="normal" title="Test Only">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -147,13 +157,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFR-xx-Ev8">
-                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <rect key="frame" x="154.5" y="196.5" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-wS-woh">
-                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="225" width="414" height="637"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="J8o-6z-A3C" id="iiq-7l-CPe"/>
@@ -169,28 +179,29 @@
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="ktX-eQ-dYZ" secondAttribute="centerY" id="3OL-ec-sei"/>
                             <constraint firstItem="rFR-xx-Ev8" firstAttribute="top" secondItem="y0K-AB-qXO" secondAttribute="bottom" constant="8" id="CWD-Fe-1Va"/>
-                            <constraint firstItem="eV5-Mk-vJW" firstAttribute="top" secondItem="RtY-XX-Sd4" secondAttribute="bottom" constant="8" id="DKH-Sd-eSf"/>
-                            <constraint firstAttribute="trailing" secondItem="eV5-Mk-vJW" secondAttribute="trailing" constant="20" id="IZT-IA-vYI"/>
-                            <constraint firstItem="ho4-M6-Nvy" firstAttribute="top" secondItem="jXN-wS-woh" secondAttribute="bottom" id="LMg-Wt-htJ"/>
-                            <constraint firstAttribute="centerX" secondItem="y0K-AB-qXO" secondAttribute="centerX" id="NGo-CC-SBc"/>
-                            <constraint firstAttribute="centerX" secondItem="43a-9j-Byy" secondAttribute="centerX" id="NiE-WR-wiE"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="trailing" secondItem="xJT-R1-yhr" secondAttribute="trailing" constant="20" id="HYX-7v-hfb"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="bottom" secondItem="jXN-wS-woh" secondAttribute="bottom" id="LMg-Wt-htJ"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="centerX" secondItem="y0K-AB-qXO" secondAttribute="centerX" id="NGo-CC-SBc"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="centerX" secondItem="43a-9j-Byy" secondAttribute="centerX" id="NiE-WR-wiE"/>
                             <constraint firstItem="y0K-AB-qXO" firstAttribute="top" secondItem="43a-9j-Byy" secondAttribute="bottom" constant="4" id="ONl-Xb-CjP"/>
-                            <constraint firstAttribute="trailing" secondItem="jXN-wS-woh" secondAttribute="trailing" id="S4b-dW-0Sw"/>
-                            <constraint firstItem="jXN-wS-woh" firstAttribute="leading" secondItem="4j4-bD-nDh" secondAttribute="leading" id="dsO-Fo-Fq4"/>
-                            <constraint firstAttribute="centerX" secondItem="sFd-zM-6ek" secondAttribute="centerX" id="eeU-Sj-XXt"/>
-                            <constraint firstItem="sFd-zM-6ek" firstAttribute="top" secondItem="eV5-Mk-vJW" secondAttribute="bottom" constant="8" id="g90-lW-K5B"/>
-                            <constraint firstAttribute="centerX" secondItem="ktX-eQ-dYZ" secondAttribute="centerX" id="ji6-NJ-Axs"/>
-                            <constraint firstAttribute="centerX" secondItem="rFR-xx-Ev8" secondAttribute="centerX" id="k3H-ID-Rnx"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="trailing" secondItem="jXN-wS-woh" secondAttribute="trailing" id="S4b-dW-0Sw"/>
+                            <constraint firstItem="jXN-wS-woh" firstAttribute="leading" secondItem="Hvg-YH-gPd" secondAttribute="leading" id="dsO-Fo-Fq4"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="centerX" secondItem="sFd-zM-6ek" secondAttribute="centerX" id="eeU-Sj-XXt"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="centerX" secondItem="ktX-eQ-dYZ" secondAttribute="centerX" id="ji6-NJ-Axs"/>
+                            <constraint firstItem="Hvg-YH-gPd" firstAttribute="centerX" secondItem="rFR-xx-Ev8" secondAttribute="centerX" id="k3H-ID-Rnx"/>
+                            <constraint firstItem="xJT-R1-yhr" firstAttribute="top" secondItem="Hvg-YH-gPd" secondAttribute="top" constant="8" id="kAW-X2-3iE"/>
+                            <constraint firstItem="xJT-R1-yhr" firstAttribute="leading" secondItem="Hvg-YH-gPd" secondAttribute="leading" constant="20" id="nDJ-gQ-gZf"/>
                             <constraint firstItem="43a-9j-Byy" firstAttribute="top" secondItem="sFd-zM-6ek" secondAttribute="bottom" constant="16" id="nPC-OY-vDd"/>
-                            <constraint firstItem="eV5-Mk-vJW" firstAttribute="leading" secondItem="4j4-bD-nDh" secondAttribute="leading" constant="20" id="oOP-Ma-E4N"/>
                             <constraint firstItem="jXN-wS-woh" firstAttribute="top" secondItem="rFR-xx-Ev8" secondAttribute="bottom" constant="8" id="tuN-Jx-Itn"/>
+                            <constraint firstItem="sFd-zM-6ek" firstAttribute="top" secondItem="xJT-R1-yhr" secondAttribute="bottom" constant="8" id="yaa-4l-nKz"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hvg-YH-gPd"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="sFd-zM-6ek" id="ZR3-ga-ufz"/>
                         <outlet property="createAndTestButton" destination="43a-9j-Byy" id="Dou-c8-ZfX"/>
                         <outlet property="resultsTableView" destination="jXN-wS-woh" id="KED-JU-uNO"/>
-                        <outlet property="slider" destination="eV5-Mk-vJW" id="KpA-0f-Qhi"/>
+                        <outlet property="segmentedControl" destination="xJT-R1-yhr" id="cvH-68-VfI"/>
                         <outlet property="spinner" destination="ktX-eQ-dYZ" id="qra-T4-rEW"/>
                         <outlet property="testOnlyButton" destination="y0K-AB-qXO" id="9WA-ga-td5"/>
                     </connections>
@@ -203,28 +214,32 @@
         <scene sceneID="MYQ-EK-gV0">
             <objects>
                 <viewController storyboardIdentifier="DictionaryViewController" id="moh-eE-6Ea" customClass="DictionaryViewController" customModule="OtusHomework" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6lS-rQ-eU2"/>
-                        <viewControllerLayoutGuide type="bottom" id="bHv-qs-rVV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w5g-JC-rKs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="dva-JY-3ea">
-                                <rect key="frame" x="18" y="52" width="378" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-fl-6WS">
+                                <rect key="frame" x="20" y="52" width="374" height="29"/>
+                                <segments>
+                                    <segment title="100"/>
+                                    <segment title="1К"/>
+                                    <segment title="10К"/>
+                                    <segment title="100К"/>
+                                    <segment title="1М"/>
+                                    <segment title="100М"/>
+                                </segments>
                                 <connections>
-                                    <action selector="sliderAdjusted:" destination="moh-eE-6Ea" eventType="valueChanged" id="6J0-hN-rOV"/>
+                                    <action selector="tabChanged:" destination="moh-eE-6Ea" eventType="valueChanged" id="Vlk-X2-vAj"/>
                                 </connections>
-                            </slider>
+                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-Wq-kLT">
-                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <rect key="frame" x="161" y="88" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ng-Uo-TRl">
-                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <rect key="frame" x="152" y="124.5" width="110" height="30"/>
                                 <state key="normal" title="Create And Test">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -233,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-VO-csU">
-                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <rect key="frame" x="174.5" y="158.5" width="65" height="30"/>
                                 <state key="normal" title="Test Only">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -242,13 +257,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1j-Qi-qVH">
-                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <rect key="frame" x="154.5" y="196.5" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BfU-p0-5tN">
-                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="225" width="414" height="637"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="moh-eE-6Ea" id="t6I-Rl-ICE"/>
@@ -262,30 +277,31 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bHv-qs-rVV" firstAttribute="top" secondItem="BfU-p0-5tN" secondAttribute="bottom" id="3pN-ea-U4A"/>
-                            <constraint firstAttribute="centerX" secondItem="3ng-Uo-TRl" secondAttribute="centerX" id="52o-1h-Sen"/>
-                            <constraint firstAttribute="centerX" secondItem="S1j-Qi-qVH" secondAttribute="centerX" id="BRD-pY-rVz"/>
-                            <constraint firstItem="Ja2-Wq-kLT" firstAttribute="top" secondItem="dva-JY-3ea" secondAttribute="bottom" constant="8" id="M9y-3s-Lw2"/>
+                            <constraint firstItem="B2v-fl-6WS" firstAttribute="top" secondItem="Co5-DZ-P4d" secondAttribute="top" constant="8" id="230-eR-uKX"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="bottom" secondItem="BfU-p0-5tN" secondAttribute="bottom" id="3pN-ea-U4A"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="centerX" secondItem="3ng-Uo-TRl" secondAttribute="centerX" id="52o-1h-Sen"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="centerX" secondItem="S1j-Qi-qVH" secondAttribute="centerX" id="BRD-pY-rVz"/>
+                            <constraint firstItem="Ja2-Wq-kLT" firstAttribute="top" secondItem="B2v-fl-6WS" secondAttribute="bottom" constant="8" id="G96-T4-019"/>
                             <constraint firstItem="3ng-Uo-TRl" firstAttribute="top" secondItem="Ja2-Wq-kLT" secondAttribute="bottom" constant="16" id="Np9-0r-lfH"/>
-                            <constraint firstItem="BfU-p0-5tN" firstAttribute="leading" secondItem="w5g-JC-rKs" secondAttribute="leading" id="PBM-6e-op3"/>
-                            <constraint firstItem="dva-JY-3ea" firstAttribute="top" secondItem="6lS-rQ-eU2" secondAttribute="bottom" constant="8" id="UqK-BU-nTU"/>
-                            <constraint firstAttribute="centerX" secondItem="VCx-6x-EyQ" secondAttribute="centerX" id="boC-eT-dXY"/>
+                            <constraint firstItem="BfU-p0-5tN" firstAttribute="leading" secondItem="Co5-DZ-P4d" secondAttribute="leading" id="PBM-6e-op3"/>
+                            <constraint firstItem="B2v-fl-6WS" firstAttribute="leading" secondItem="Co5-DZ-P4d" secondAttribute="leading" constant="20" id="VwR-kI-83i"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="centerX" secondItem="VCx-6x-EyQ" secondAttribute="centerX" id="boC-eT-dXY"/>
                             <constraint firstItem="BfU-p0-5tN" firstAttribute="top" secondItem="S1j-Qi-qVH" secondAttribute="bottom" constant="8" id="c5w-hG-4Qc"/>
-                            <constraint firstAttribute="trailing" secondItem="BfU-p0-5tN" secondAttribute="trailing" id="fUE-Wz-I0J"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="trailing" secondItem="BfU-p0-5tN" secondAttribute="trailing" id="fUE-Wz-I0J"/>
                             <constraint firstItem="OJN-VO-csU" firstAttribute="top" secondItem="3ng-Uo-TRl" secondAttribute="bottom" constant="4" id="lxA-1R-eq4"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="trailing" secondItem="B2v-fl-6WS" secondAttribute="trailing" constant="20" id="pC3-d2-3mQ"/>
                             <constraint firstAttribute="centerY" secondItem="VCx-6x-EyQ" secondAttribute="centerY" id="sfs-Oj-2Ei"/>
                             <constraint firstItem="S1j-Qi-qVH" firstAttribute="top" secondItem="OJN-VO-csU" secondAttribute="bottom" constant="8" id="tGf-dA-9sS"/>
-                            <constraint firstAttribute="centerX" secondItem="Ja2-Wq-kLT" secondAttribute="centerX" id="w6Y-2K-bHA"/>
-                            <constraint firstAttribute="centerX" secondItem="OJN-VO-csU" secondAttribute="centerX" id="wYP-Oc-cfg"/>
-                            <constraint firstAttribute="trailing" secondItem="dva-JY-3ea" secondAttribute="trailing" constant="20" id="yGk-3I-ztY"/>
-                            <constraint firstItem="dva-JY-3ea" firstAttribute="leading" secondItem="w5g-JC-rKs" secondAttribute="leading" constant="20" id="zTG-Az-qCT"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="centerX" secondItem="Ja2-Wq-kLT" secondAttribute="centerX" id="w6Y-2K-bHA"/>
+                            <constraint firstItem="Co5-DZ-P4d" firstAttribute="centerX" secondItem="OJN-VO-csU" secondAttribute="centerX" id="wYP-Oc-cfg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Co5-DZ-P4d"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="Ja2-Wq-kLT" id="6H4-3n-ms4"/>
                         <outlet property="createAndTestButton" destination="3ng-Uo-TRl" id="A3c-Fn-kcb"/>
                         <outlet property="resultsTableView" destination="BfU-p0-5tN" id="6M9-Pe-8CN"/>
-                        <outlet property="slider" destination="dva-JY-3ea" id="duI-b3-AM8"/>
+                        <outlet property="segmentedControl" destination="B2v-fl-6WS" id="UW0-Dz-Q5f"/>
                         <outlet property="spinner" destination="VCx-6x-EyQ" id="bzQ-Tu-MyY"/>
                         <outlet property="testOnlyButton" destination="OJN-VO-csU" id="91Z-uW-RZN"/>
                     </connections>

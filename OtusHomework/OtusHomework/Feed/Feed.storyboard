@@ -129,20 +129,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-XT-81y">
-                                <rect key="frame" x="18" y="52" width="378" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zi4-YX-3jM">
+                                <rect key="frame" x="20" y="52" width="374" height="29"/>
+                                <segments>
+                                    <segment title="100"/>
+                                    <segment title="1К"/>
+                                    <segment title="10К"/>
+                                    <segment title="100К"/>
+                                    <segment title="1М"/>
+                                    <segment title="100М"/>
+                                </segments>
                                 <connections>
-                                    <action selector="sliderAdjusted:" destination="5xW-eR-MZa" eventType="valueChanged" id="Mmu-38-Ben"/>
+                                    <action selector="tabChanged:" destination="5xW-eR-MZa" eventType="valueChanged" id="oAK-my-xde"/>
                                 </connections>
-                            </slider>
+                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-aA-wMA">
-                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <rect key="frame" x="161" y="88" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nac-aC-gSD">
-                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <rect key="frame" x="152" y="124.5" width="110" height="30"/>
                                 <state key="normal" title="Create And Test">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -151,7 +159,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-Lj-YeV">
-                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <rect key="frame" x="174.5" y="158.5" width="65" height="30"/>
                                 <state key="normal" title="Test Only">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -160,13 +168,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF9-0R-csf">
-                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <rect key="frame" x="154.5" y="196.5" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-sv-ann">
-                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <rect key="frame" x="0.0" y="225" width="414" height="637"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5xW-eR-MZa" id="Zfr-Cx-X5e"/>
@@ -180,8 +188,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Kop-aA-wMA" firstAttribute="top" secondItem="zi4-YX-3jM" secondAttribute="bottom" constant="8" id="1Dv-ck-gLe"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="trailing" secondItem="sU2-sv-ann" secondAttribute="trailing" id="1Gz-tX-Dy5"/>
-                            <constraint firstItem="W8x-XT-81y" firstAttribute="top" secondItem="nOR-WW-rpw" secondAttribute="top" constant="8" id="7gL-LO-p2a"/>
+                            <constraint firstItem="nOR-WW-rpw" firstAttribute="trailing" secondItem="zi4-YX-3jM" secondAttribute="trailing" constant="20" id="8cv-tb-ZX5"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="centerX" secondItem="Cpo-Lj-YeV" secondAttribute="centerX" id="EzE-Wo-mGE"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="centerX" secondItem="9OG-pb-c88" secondAttribute="centerX" id="L4t-k0-8aT"/>
                             <constraint firstItem="sU2-sv-ann" firstAttribute="leading" secondItem="nOR-WW-rpw" secondAttribute="leading" id="LgT-93-6hH"/>
@@ -191,11 +200,10 @@
                             <constraint firstItem="Cpo-Lj-YeV" firstAttribute="top" secondItem="nac-aC-gSD" secondAttribute="bottom" constant="4" id="b2I-y5-vXr"/>
                             <constraint firstItem="lF9-0R-csf" firstAttribute="top" secondItem="Cpo-Lj-YeV" secondAttribute="bottom" constant="8" id="egb-hR-GCk"/>
                             <constraint firstAttribute="centerY" secondItem="9OG-pb-c88" secondAttribute="centerY" id="ggq-Kj-DsX"/>
-                            <constraint firstItem="nOR-WW-rpw" firstAttribute="trailing" secondItem="W8x-XT-81y" secondAttribute="trailing" constant="20" id="hul-BD-92B"/>
+                            <constraint firstItem="zi4-YX-3jM" firstAttribute="top" secondItem="nOR-WW-rpw" secondAttribute="top" constant="8" id="o9k-n5-aRF"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="centerX" secondItem="lF9-0R-csf" secondAttribute="centerX" id="o9l-NB-HWw"/>
-                            <constraint firstItem="W8x-XT-81y" firstAttribute="leading" secondItem="nOR-WW-rpw" secondAttribute="leading" constant="20" id="oHl-az-1rh"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="bottom" secondItem="sU2-sv-ann" secondAttribute="bottom" id="pCj-36-sqG"/>
-                            <constraint firstItem="Kop-aA-wMA" firstAttribute="top" secondItem="W8x-XT-81y" secondAttribute="bottom" constant="8" id="pex-OI-bCb"/>
+                            <constraint firstItem="zi4-YX-3jM" firstAttribute="leading" secondItem="nOR-WW-rpw" secondAttribute="leading" constant="20" id="raY-vh-fLc"/>
                             <constraint firstItem="nOR-WW-rpw" firstAttribute="centerX" secondItem="Kop-aA-wMA" secondAttribute="centerX" id="thh-I2-qbN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nOR-WW-rpw"/>
@@ -204,7 +212,7 @@
                         <outlet property="countLabel" destination="Kop-aA-wMA" id="N09-cq-Sfq"/>
                         <outlet property="createAndTestButton" destination="nac-aC-gSD" id="kPG-gC-Bj8"/>
                         <outlet property="resultsTableView" destination="sU2-sv-ann" id="im6-Q5-WKA"/>
-                        <outlet property="slider" destination="W8x-XT-81y" id="t0Y-7v-KRg"/>
+                        <outlet property="segmentedControl" destination="zi4-YX-3jM" id="ZP4-aJ-prv"/>
                         <outlet property="spinner" destination="9OG-pb-c88" id="00Y-8F-tgX"/>
                         <outlet property="testOnlyButton" destination="Cpo-Lj-YeV" id="1Yg-QH-jO1"/>
                         <outlet property="view" destination="64I-lX-ig8" id="iWZ-KL-V59"/>

@@ -17,7 +17,7 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
 
   //MARK: IBOutlets
 
-  @IBOutlet weak var slider: UISlider?
+  @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var countLabel: UILabel?
   @IBOutlet weak var resultsTableView: UITableView!
   @IBOutlet weak var createAndTestButton: UIButton!
@@ -26,7 +26,7 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
 
   //MARK: item tracking
 
-  fileprivate var numberOfItems: Int = 1000 //Default to 1000
+  var numberOfItems: Int = 100 //Default to 1000
 
   //MARK: Lazy-instantiated variables
 
@@ -79,19 +79,24 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
     countLabel?.text = "Number of items: \(numberFormatter.string(from: numberOfItems as NSNumber)!)"
   }
 
-  func setSliderValueProgrammatically(_ value: Int) {
-    slider?.value = Float(value)
-    if let slider = slider {
-    sliderAdjusted(slider)
+  func setTabValueProgrammatically(_ value: Int) {
+    var tab = Int(ceil(log10(Double(value)))) - 1
+    if tab < 0 {
+        tab = 0
+    } else if tab > self.segmentedControl.numberOfSegments {
+        tab = self.segmentedControl.numberOfSegments - 1 >= 0 ? self.segmentedControl.numberOfSegments - 1 : 0
     }
-    
+    self.segmentedControl.selectedSegmentIndex = tab
+    if let segmentedControl = self.segmentedControl {
+        self.tabChanged(segmentedControl)
+    }
   }
 
   func setControlsEnabled(_ enabled: Bool) {
     testOnlyButton.isEnabled = enabled
     createAndTestButton.isEnabled = enabled
-    if let slider = slider {
-        slider.isEnabled = enabled
+    if let segmentedControl = self.segmentedControl {
+        segmentedControl.isEnabled = enabled
     }
     if enabled {
       spinner.stopAnimating()
@@ -105,9 +110,9 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
   }
 
   //MARK: IBActions
-
-  @IBAction func sliderAdjusted(_ adjustedSlider: UISlider) {
-    numberOfItems = Int(ceil(adjustedSlider.value))
+    
+  @IBAction func tabChanged(_ sender: Any) {
+    numberOfItems = Int(ceil(pow(Double(10), Double(self.segmentedControl.selectedSegmentIndex + 2))))
     testOnlyButton.isEnabled = false
     updateCountLabel()
   }

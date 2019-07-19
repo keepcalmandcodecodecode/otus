@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SharedPayload
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         print(#function)
+        if let controller = self.window?.rootViewController as? SplitViewController {
+            controller.didBecomeActive()
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(#function)
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return true
+    }
 
 }
 

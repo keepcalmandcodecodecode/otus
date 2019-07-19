@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SharedPayload
 
 class SplitViewController: UISplitViewController, UISplitViewControllerDelegate {
 
@@ -16,11 +17,37 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
         self.preferredDisplayMode = .allVisible
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        handlePayload()
+    }
+    
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return viewControllers.last?.preferredStatusBarStyle ?? .default
+    }
+    
+    func didBecomeActive() {
+        handlePayload()
+    }
+    
+    private func handlePayload() {
+        let reader: SharedPayloadReadable = SharedPayloadProvider()
+        if let string = reader.readPayload() {
+            if let viewController = self.presentedViewController as? LocalUnitsConverterViewController {
+                viewController.stringToConvert = string
+            } else {
+                let storyboard = UIStoryboard(name: "LocalUnitsConverter", bundle: Bundle.main)
+                if let viewController = storyboard.instantiateInitialViewController() as? LocalUnitsConverterViewController {
+                    viewController.stringToConvert = string
+                    viewController.modalPresentationStyle = .overFullScreen
+                    self.show(viewController, sender: self)
+                }
+            }
+            
+        }
     }
 }
